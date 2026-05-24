@@ -3,15 +3,38 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
     color: #333;
+    
+    background-color: #f4f4f9;
+    background-image: url('/Images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 header {
     background-color: #2c3e50;
+    /* Changed 0.85 to 0.3 to make your background image much brighter */
+    background-image: linear-gradient(rgba(44, 62, 80, 0.3), rgba(44, 62, 80, 0.3)), url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
     padding: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+header h1, header p {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+    margin: 5px 0;
+}
+
+.university-logo {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6); 
+    margin-bottom: 10px;
 }
 
 nav {
@@ -44,7 +67,11 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-h1, h2, h3 {
+h1 {
+    color: #befffc;
+}
+
+h2, h3 {
     color: #2c3e50;
 }
 
