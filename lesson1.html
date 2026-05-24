@@ -86,13 +86,53 @@
 
         <div class="concept-box">
             <h3>6. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
-            <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements that belong to A, or B, or both. {x | x ∈ A ∨ x ∈ B}</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements that belong to both A and B. {x | x ∈ A ∧ x ∈ B}</li>
-                <li><strong>Disjoint Sets:</strong> Two sets are disjoint if their intersection is the empty set (A ∩ B = ∅).</li>
-                <li><strong>Difference (A - B):</strong> Elements belonging to A but NOT to B. {x | x ∈ A ∧ x ∉ B}</li>
-                <li><strong>Complement (A<sup>c</sup> or A'):</strong> All elements in the Universal set U that are NOT in A. {x ∈ U | x ∉ A}</li>
+            <p>Key operations used to combine or modify sets.</p>
+            <p style="background: rgba(255,255,255,0.5); padding: 10px; border-radius: 4px; border: 1px solid #d3a625;">
+                <strong>Let's use these sets for our examples below:</strong><br>
+                Universal Set <strong>U</strong> = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}<br>
+                Set <strong>A</strong> = {1, 2, 3, 4, 5}<br>
+                Set <strong>B</strong> = {4, 5, 6, 7, 8}
+            </p>
+            
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>Union (A ∪ B)</strong>
+                        Elements in A, B, or both. {x | x ∈ A ∨ x ∈ B}
+                        <div style="margin-top: 10px; padding: 8px; background: rgba(211, 166, 37, 0.2); border-left: 3px solid #d3a625; border-radius: 4px; font-size: 0.95rem;">
+                            <strong>🪄 Example:</strong> A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8}
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Intersection (A ∩ B)</strong>
+                        Elements in both A and B. {x | x ∈ A ∧ x ∈ B}
+                        <div style="margin-top: 10px; padding: 8px; background: rgba(211, 166, 37, 0.2); border-left: 3px solid #d3a625; border-radius: 4px; font-size: 0.95rem;">
+                            <strong>🪄 Example:</strong> A ∩ B = {4, 5}
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Difference (A - B)</strong>
+                        Elements in A but not in B. {x | x ∈ A ∧ x ∉ B}
+                        <div style="margin-top: 10px; padding: 8px; background: rgba(211, 166, 37, 0.2); border-left: 3px solid #d3a625; border-radius: 4px; font-size: 0.95rem;">
+                            <strong>🪄 Example:</strong> A - B = {1, 2, 3} <br>
+                            <em>(Notice 4 and 5 are removed because they are in B)</em>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Complement (A<sup>c</sup>)</strong>
+                        Elements in the universal set U but not in A. {x ∈ U | x ∉ A}
+                        <div style="margin-top: 10px; padding: 8px; background: rgba(211, 166, 37, 0.2); border-left: 3px solid #d3a625; border-radius: 4px; font-size: 0.95rem;">
+                            <strong>🪄 Example:</strong> A<sup>c</sup> = {6, 7, 8, 9, 10} <br>
+                            <em>(Everything in U that is missing from A)</em>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
 
