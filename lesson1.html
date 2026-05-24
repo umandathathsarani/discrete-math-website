@@ -32,33 +32,94 @@
         <h2>Lecture 1: Set Theory</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
+            <h3>1. Definitions and Terminology</h3>
+            <p>A <strong>Set</strong> is an unordered, well-defined collection of distinct objects. The objects in a set are called its <strong>elements</strong> or <strong>members</strong>.</p>
             <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
+                <li><strong>x ∈ A:</strong> x is an element of set A.</li>
+                <li><strong>x ∉ A:</strong> x is not an element of set A.</li>
+                <li><strong>Order does not matter:</strong> {1, 2, 3} is the same as {3, 1, 2}.</li>
+                <li><strong>Repetitions are ignored:</strong> {1, 1, 2, 3, 3} is exactly the same set as {1, 2, 3}.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
+            <h3>2. Representing Sets</h3>
+            <p>There are two primary ways to describe a set:</p>
+            <ul>
+                <li><strong>Roster Method:</strong> Listing all the elements explicitly inside braces. <br><em>Example:</em> V = {a, e, i, o, u}</li>
+                <li><strong>Set-Builder Notation:</strong> Stating the properties that all elements must satisfy. <br><em>Example:</em> O = {x | x is an odd positive integer less than 10}</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. Standard Sets of Numbers</h3>
+            <p>Important mathematical sets have standard symbols:</p>
+            <ul>
+                <li><strong>ℕ (Natural Numbers):</strong> {0, 1, 2, 3, ...}</li>
+                <li><strong>ℤ (Integers):</strong> {..., -2, -1, 0, 1, 2, ...}</li>
+                <li><strong>ℤ⁺ (Positive Integers):</strong> {1, 2, 3, ...}</li>
+                <li><strong>ℚ (Rational Numbers):</strong> {p/q | p ∈ ℤ, q ∈ ℤ, and q ≠ 0}</li>
+                <li><strong>ℝ (Real Numbers):</strong> All rational and irrational numbers.</li>
+                <li><strong>ℂ (Complex Numbers):</strong> Numbers in the form a + bi.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>4. Types of Sets & Cardinality</h3>
+            <ul>
+                <li><strong>Empty Set (Null Set):</strong> A set with no elements. Denoted by ∅ or {}.</li>
+                <li><strong>Singleton Set:</strong> A set containing exactly one element. <em>Example:</em> {a}.</li>
+                <li><strong>Universal Set (U):</strong> The set containing everything currently under consideration.</li>
+                <li><strong>Cardinality (|S|):</strong> The number of distinct elements in a set S. If S = {1, 2, 3}, then |S| = 3.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>5. Subsets and Power Sets</h3>
+            <ul>
+                <li><strong>Subset (A ⊆ B):</strong> A is a subset of B if every element of A is also in B.</li>
+                <li><strong>Proper Subset (A ⊂ B):</strong> A is a subset of B, but A is not perfectly equal to B (B has at least one extra element).</li>
+                <li><strong>Power Set (𝒫(A)):</strong> The set of all possible subsets of A, including the empty set and A itself. 
+                    <br><em>Rule:</em> If a set A has <em>n</em> elements, its Power Set will have <strong>2<sup>n</sup></strong> elements.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>6. Set Operations</h3>
             <p>Key operations used to combine or modify sets:</p>
             <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
+                <li><strong>Union (A ∪ B):</strong> Elements that belong to A, or B, or both. {x | x ∈ A ∨ x ∈ B}</li>
+                <li><strong>Intersection (A ∩ B):</strong> Elements that belong to both A and B. {x | x ∈ A ∧ x ∈ B}</li>
+                <li><strong>Disjoint Sets:</strong> Two sets are disjoint if their intersection is the empty set (A ∩ B = ∅).</li>
+                <li><strong>Difference (A - B):</strong> Elements belonging to A but NOT to B. {x | x ∈ A ∧ x ∉ B}</li>
+                <li><strong>Complement (A<sup>c</sup> or A'):</strong> All elements in the Universal set U that are NOT in A. {x ∈ U | x ∉ A}</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
+            <h3>7. Cartesian Product</h3>
+            <p>The Cartesian Product of sets A and B, denoted by <strong>A × B</strong>, is the set of all ordered pairs (a, b) where a ∈ A and b ∈ B.</p>
+            <p><strong>A × B = {(a, b) | a ∈ A ∧ b ∈ B}</strong></p>
+            <p><em>Note:</em> A × B is generally NOT equal to B × A.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>8. Important Set Identities (Laws)</h3>
+            <p>These logical rules are used to simplify complex set expressions:</p>
             <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
+                <li><strong>Identity Laws:</strong><br> A ∪ ∅ = A <br> A ∩ U = A</li>
+                <li><strong>Domination Laws:</strong><br> A ∪ U = U <br> A ∩ ∅ = ∅</li>
+                <li><strong>Idempotent Laws:</strong><br> A ∪ A = A <br> A ∩ A = A</li>
+                <li><strong>Complementation Law:</strong><br> (A<sup>c</sup>)<sup>c</sup> = A</li>
+                <li><strong>Commutative Laws:</strong><br> A ∪ B = B ∪ A <br> A ∩ B = B ∩ A</li>
+                <li><strong>Associative Laws:</strong><br> A ∪ (B ∪ C) = (A ∪ B) ∪ C <br> A ∩ (B ∩ C) = (A ∩ B) ∩ C</li>
+                <li><strong>Distributive Laws:</strong><br> A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) <br> A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</li>
+                <li><strong>De Morgan's Laws:</strong><br> (A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup> <br> (A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
+                <li><strong>Absorption Laws:</strong><br> A ∪ (A ∩ B) = A <br> A ∩ (A ∪ B) = A</li>
+                <li><strong>Complement Laws:</strong><br> A ∪ A<sup>c</sup> = U <br> A ∩ A<sup>c</sup> = ∅</li>
             </ul>
         </div>
+        <a href="tutorial-1.html" class="magical-btn">⚡ Practice These Spells (Tutorial 1)</a>
     </div>
 
     <footer>

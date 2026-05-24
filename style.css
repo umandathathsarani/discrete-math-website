@@ -156,3 +156,60 @@ footer a {
 footer a:hover {
     text-shadow: 0 0 8px rgba(211, 166, 37, 0.8);
 }
+
+.magical-btn {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 10px auto;
+    padding: 15px 35px;
+    background: #740001;
+    color: #e0d0a6;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    border: 2px solid #d3a625; 
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(116, 0, 1, 0.4);
+    transition: all 0.3s ease;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.magical-btn:hover {
+    background: #d3a625;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(211, 166, 37, 0.8);
+}
+
+.quiz-question {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(211, 166, 37, 0.5);
+}
+
+details {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-left: 3px solid #d3a625;
+    margin-top: 15px;
+    border-radius: 0 4px 4px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #740001;
+    font-size: 1.05rem;
+    outline: none;
+}
+
+summary:hover {
+    color: #111;
+}
+
+details p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-style: italic;
+    color: #2c1e16;
+}
