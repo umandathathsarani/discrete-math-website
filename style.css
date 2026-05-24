@@ -214,10 +214,10 @@ details p {
     color: #2c1e16;
 }
 
-.slytherin-note {
-    background-color: #061c0e;
+.ravenclaw-note {
+    background-color: #1a2c42; 
     color: #e0e0e0; 
-    border-left: 4px solid #5d5d5d;
+    border-left: 4px solid #c0803e;
     padding: 10px 15px;
     margin-top: 12px;
     font-size: 0.95rem;
@@ -226,7 +226,7 @@ details p {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.slytherin-note strong {
-    color: #aaaaaa;
+.ravenclaw-note strong {
+    color: #c0803e;
     font-style: normal;
 }
