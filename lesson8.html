@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1: Set Theory</title>
+    <title>Lecture 8: Binary Trees, Heaps, and Spanning Trees</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Lecture 1: Set Theory</h1>
+        <h1>Lecture 8: Binary Trees, Heaps, and Spanning Trees</h1>
     </header>
 
     <nav>
@@ -28,35 +28,21 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 1: Set Theory</h2>
+        <h2>Lecture 8: Binary Trees, Heaps, and Spanning Trees</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
+            <h3>1. Tree Anatomy</h3>
+            <p>A connected undirected graph with no simple circuits. A <strong>Rooted Tree</strong> has one designated top vertex.</p>
             <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
+                <li><strong>Binary Tree:</strong> Every internal node has at most two children.</li>
+                <li><strong>Full vs. Complete:</strong> A Full tree has exactly 0 or 2 children per node. A Complete tree is filled left-to-right on the bottom level.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
-            <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
-            </ul>
-        </div>
-
-        <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
-            <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
-            </ul>
+            <h3>2. Heaps & Prim's Algorithm</h3>
+            <p><strong>Max/Min Heap:</strong> A complete binary tree where the parent node is strictly greater than (or less than) its children.</p>
+            <p><strong>Prim's Algorithm:</strong> A greedy algorithm to find a Minimum Spanning Tree. It repeatedly adds the lowest-weight edge that connects a vertex inside the tree to a vertex outside.</p>
         </div>
     </div>
 

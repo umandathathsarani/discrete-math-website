@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1: Set Theory</title>
+    <title>Lecture 2: Functions</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Lecture 1: Set Theory</h1>
+        <h1>Lecture 2: Functions</h1>
     </header>
 
     <nav>
@@ -28,35 +28,31 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 1: Set Theory</h2>
+        <h2>Lecture 2: Functions</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
+            <h3>1. Definition and Terminology</h3>
+            <p>A function <strong>f</strong> from a set X to a set Y relates each element of X to a <strong>unique</strong> element of Y.</p>
             <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
+                <li><strong>Domain:</strong> The set of all possible input values (X).</li>
+                <li><strong>Codomain:</strong> The set from which the function's output values are chosen (Y).</li>
+                <li><strong>Range (Image):</strong> The actual set of all values taken by the function (a subset of the Codomain).</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
+            <h3>2. Types of Functions</h3>
             <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
+                <li><strong>One-to-One (Injective):</strong> No two different elements in the domain map to the same element in the codomain. If f(a) = f(b), then a = b.</li>
+                <li><strong>Onto (Surjective):</strong> Every element in the codomain is mapped to by at least one element in the domain. (Range = Codomain).</li>
+                <li><strong>Bijective:</strong> A function that is both One-to-One and Onto.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
-            <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
-            </ul>
+            <h3>3. Inverse and Composition</h3>
+            <p><strong>Inverse Function (f⁻¹):</strong> If f is bijective, it has an inverse. If f(x) = y, then f⁻¹(y) = x.</p>
+            <p><strong>Composition of Functions (f ∘ g):</strong> The process of applying one function to the results of another. (f ∘ g)(x) = f(g(x)).</p>
         </div>
     </div>
 

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1: Set Theory</title>
+    <title>Lecture 5: Combinations & Binomial Theorem</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Lecture 1: Set Theory</h1>
+        <h1>Lecture 5: Combinations & Binomial Theorem</h1>
     </header>
 
     <nav>
@@ -28,35 +28,19 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 1: Set Theory</h2>
+        <h2>Lecture 5: Combinations & Binomial Theorem</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
-            <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
-            </ul>
+            <h3>1. Combinations</h3>
+            <p>An arrangement where <strong>order does NOT matter</strong>.</p>
+            <p><strong>C(n, r) = n! / (r! &times; (n-r)!)</strong></p>
+            <p><em>With Repetition:</em> Choosing r items from n types allows C(n+r-1, r) ways.</p>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
-            <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
-            </ul>
-        </div>
-
-        <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
-            <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
-            </ul>
+            <h3>2. Binomial Theorem & Pascal's Triangle</h3>
+            <p>The theorem provides a way to expand expressions of the form (x+y)<sup>n</sup>.</p>
+            <p><strong>Pascal's Identity:</strong> C(n, k) = C(n-1, k-1) + C(n-1, k). This forms Pascal's triangle, where each number is the sum of the two directly above it.</p>
         </div>
     </div>
 

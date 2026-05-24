@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1: Set Theory</title>
+    <title>Lecture 7: Graph Theory & Search Algorithm</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Lecture 1: Set Theory</h1>
+        <h1>Lecture 7: Graph Theory & Search Algorithms</h1>
     </header>
 
     <nav>
@@ -28,34 +28,23 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 1: Set Theory</h2>
+        <h2>Lecture 7: Graph Theory & Search Algorithms</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
+            <h3>1. Graph Components</h3>
             <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
+                <li><strong>Vertices (V):</strong> The nodes or points in the graph.</li>
+                <li><strong>Edges (E):</strong> The connections between vertices. Can be Directed (one-way) or Undirected (two-way).</li>
+                <li><strong>Simple Graph:</strong> No multiple edges between the same two nodes, and no loops.</li>
+                <li><strong>Multigraph:</strong> Allows multiple edges between the same nodes.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
+            <h3>2. Graph Traversal</h3>
             <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
-            </ul>
-        </div>
-
-        <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
-            <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
+                <li><strong>Breadth-First Search (BFS):</strong> Explores level-by-level using a Queue. Good for finding the shortest path in unweighted graphs.</li>
+                <li><strong>Depth-First Search (DFS):</strong> Explores as deep as possible along a branch before backtracking, using a Stack or recursion.</li>
             </ul>
         </div>
     </div>

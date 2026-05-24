@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1: Set Theory</title>
+    <title>Lecture 10: Analysis of Algorithms</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Lecture 1: Set Theory</h1>
+        <h1>Lecture 10: Analysis of Algorithms</h1>
     </header>
 
     <nav>
@@ -28,35 +28,22 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 1: Set Theory</h2>
+        <h2>Lecture 10: Analysis of Algorithms</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
+            <h3>1. Algorithm Complexity</h3>
+            <p>We analyze algorithms to predict performance independent of hardware, counting basic operations instead of seconds.</p>
             <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
+                <li><strong>Time Complexity:</strong> Running time as a function of input size.</li>
+                <li><strong>Space Complexity:</strong> Memory required as a function of input size.</li>
+                <li><strong>Asymptotic Bounds:</strong> Big-O (Upper bound), Big-Omega (Lower bound), Big-Theta (Tight bound).</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
-            <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
-            </ul>
-        </div>
-
-        <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
-            <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
-            </ul>
+            <h3>2. The Master Theorem</h3>
+            <p>Solves recurrence relations of the form: <strong>T(n) = aT(n/b) + f(n)</strong></p>
+            <p>Compares f(n) to n<sup>log<sub>b</sub>a</sup> to determine the tight asymptotic bound across three distinct cases.</p>
         </div>
     </div>
 

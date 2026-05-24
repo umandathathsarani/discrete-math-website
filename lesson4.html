@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1: Set Theory</title>
+    <title>Lecture 4: The Basics of Counting & Permutations</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Lecture 1: Set Theory</h1>
+        <h1>Lecture 4: The Basics of Counting & Permutations</h1>
     </header>
 
     <nav>
@@ -28,34 +28,25 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 1: Set Theory</h2>
+        <h2>Lecture 4: The Basics of Counting & Permutations</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
+            <h3>1. The Counting Rules</h3>
             <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
+                <li><strong>Sum Rule (Mutually Exclusive):</strong> If a task can be done in n<sub>1</sub> ways or n<sub>2</sub> ways, total ways = n<sub>1</sub> + n<sub>2</sub>.</li>
+                <li><strong>Product Rule (Sequential):</strong> If a procedure has two tasks done in n<sub>1</sub> and n<sub>2</sub> ways, total ways = n<sub>1</sub> &times; n<sub>2</sub>.</li>
+                <li><strong>Subtraction Rule (Inclusion-Exclusion):</strong> Used when tasks overlap. Total = n<sub>1</sub> + n<sub>2</sub> - (number of common ways).</li>
+                <li><strong>Division Rule:</strong> Used when items are grouped in indistinguishable ways.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
+            <h3>2. Permutations</h3>
+            <p>An arrangement where <strong>order matters</strong>.</p>
             <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
-            </ul>
-        </div>
-
-        <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
-            <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
+                <li><strong>Without Repetition:</strong> P(n, r) = n! / (n-r)!</li>
+                <li><strong>With Repetition:</strong> n<sup>r</sup></li>
+                <li><strong>With Indistinguishable Objects:</strong> n! / (n<sub>1</sub>! &times; n<sub>2</sub>! &times; ... &times; n<sub>k</sub>!)</li>
             </ul>
         </div>
     </div>

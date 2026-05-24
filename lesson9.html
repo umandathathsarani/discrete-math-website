@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1: Set Theory</title>
+    <title>Lecture 9: Recursion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Lecture 1: Set Theory</h1>
+        <h1>Lecture 9: Recursion</h1>
     </header>
 
     <nav>
@@ -28,34 +28,23 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 1: Set Theory</h2>
+        <h2>Lecture 9: Recursion</h2>
 
         <div class="concept-box">
-            <h3>1. Definitions and Notations</h3>
-            <p>A <strong>Set</strong> is any well-defined collection of objects. The elements of a set are the objects within it.</p>
+            <h3>1. Recursive Definitions</h3>
+            <p>Solving a problem by breaking it down into smaller subproblems of the same exact form.</p>
             <ul>
-                <li><strong>x ∈ A:</strong> means x is a member of set A.</li>
-                <li><strong>x ∉ A:</strong> means x is not a member of set A.</li>
+                <li><strong>Basis Step:</strong> Specify the function's value at the smallest input (the stopping condition).</li>
+                <li><strong>Recursive Step:</strong> Provide a rule for finding its value at larger integers based on smaller ones.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Set Operations</h3>
-            <p>Key operations used to combine or modify sets:</p>
+            <h3>2. Famous Recursive Algorithms</h3>
             <ul>
-                <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both.</li>
-                <li><strong>Intersection (A ∩ B):</strong> Elements in both A and B.</li>
-                <li><strong>Difference (A - B):</strong> Elements in A but not in B.</li>
-                <li><strong>Complement (A<sup>c</sup>):</strong> Elements in the universal set U but not in A.</li>
-            </ul>
-        </div>
-
-        <div class="concept-box">
-            <h3>3. Important Identities</h3>
-            <p><strong>De Morgan's Laws:</strong></p>
-            <ul>
-                <li>(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></li>
-                <li>(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></li>
+                <li><strong>GCD (Greatest Common Divisor):</strong> gcd(a, b) = gcd(b mod a, a).</li>
+                <li><strong>Binary Search:</strong> Halving an sorted array to find a target integer.</li>
+                <li><strong>Tower of Hanoi:</strong> Moving disks between pegs using smaller sub-moves.</li>
             </ul>
         </div>
     </div>
