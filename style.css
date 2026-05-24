@@ -6,7 +6,7 @@ body {
     color: #333;
     
     background-color: #f4f4f9;
-    background-image: url('/Images/background.jpg');
+    background-image: url('/Images/background1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -57,15 +57,6 @@ nav a:hover {
     background: #1abc9c;
 }
 
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
 h1 {
     color: #befffc;
 }
@@ -74,19 +65,35 @@ h2, h3 {
     color: #2c3e50;
 }
 
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+  
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
 .concept-box {
-    background: #e8f4f8;
+    background: rgba(232, 244, 248, 0.8); 
     border-left: 5px solid #3498db;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 0 8px 8px 0;
 }
 
 .author-profile {
-    background: #ecf0f1;
+    background: rgba(236, 240, 241, 0.8);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 30px;
     border-left: 5px solid #2980b9;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .author-profile h3 {
@@ -99,12 +106,13 @@ h2, h3 {
 }
 
 footer {
-    background-color: #2c3e50;
+    background-color: rgba(44, 62, 80, 0.95);
     color: #bdc3c7;
     text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 40px;
+    padding: 2rem 0;
+    margin-top: 50px;
     font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
 }
 
 footer a {
