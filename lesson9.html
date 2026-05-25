@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 9: Recursion</title>
+    <title>Lesson 9: Discrete Mathematics - Recursion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
         <h1>Lecture 9: Recursion</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -32,29 +32,144 @@
         <h2>Lecture 9: Recursion</h2>
 
         <div class="concept-box">
-            <h3>1. Recursive Definitions</h3>
-            <p>Solving a problem by breaking it down into smaller subproblems of the same exact form.</p>
+            <h3>1. Recursive Thinking</h3>
+            <p>To solve a problem <strong>recursively</strong> means to find a way to break it down into smaller subproblems, each having the exact same form as the original problem.</p>
+            <p><strong>A recursively defined picture:</strong> First, an original picture is given. Then a process of successively superimposing centered smaller pictures on top of the previous pictures is carried out.</p>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/recursion-picture.png" alt="Recursive Picture Illustration" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 1: Visual representation of a recursively defined picture.</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>2. Recursively Defined Functions</h3>
+            <p>A recursive definition of a mathematical function consists of two essential steps:</p>
             <ul>
-                <li><strong>Basis Step:</strong> Specify the function's value at the smallest input (the stopping condition).</li>
-                <li><strong>Recursive Step:</strong> Provide a rule for finding its value at larger integers based on smaller ones.</li>
+                <li><strong>BASIS STEP:</strong> Specify the value of the function at the least possible input integer(s).</li>
+                <li><strong>RECURSIVE STEP:</strong> Give a rule for finding its value at an integer from its values at smaller integers.</li>
+            </ul>
+            <p><em>Note:</em> A function <code>f(n)</code> is functionally the same as a sequence <code>a₀, a₁, ...</code>, where <code>f(i) = aᵢ</code>.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. Function Example: Simple Recurrence</h3>
+            <p><strong>Problem:</strong> Suppose <em>f</em> is defined by:</p>
+            <ul>
+                <li><code>f(0) = 3</code></li>
+                <li><code>f(n+1) = 2f(n) + 3</code></li>
+            </ul>
+            <p>Find <code>f(1), f(2), f(3), f(4)</code>.</p>
+            
+            <p><strong>Solution:</strong></p>
+            <ul>
+                <li><code>f(1) = 2f(0) + 3 = 2(3) + 3 = 9</code></li>
+                <li><code>f(2) = 2f(1) + 3 = 2(9) + 3 = 21</code></li>
+                <li><code>f(3) = 2f(2) + 3 = 2(21) + 3 = 45</code></li>
+                <li><code>f(4) = 2f(3) + 3 = 2(45) + 3 = 93</code></li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Famous Recursive Algorithms</h3>
+            <h3>4. Function Example: The Factorial Function</h3>
+            <p><strong>Problem:</strong> Give a recursive definition of the factorial function <code>F(n) = n!</code>.</p>
+            <p><strong>Solution:</strong></p>
             <ul>
-                <li><strong>GCD (Greatest Common Divisor):</strong> gcd(a, b) = gcd(b mod a, a).</li>
-                <li><strong>Binary Search:</strong> Halving an sorted array to find a target integer.</li>
-                <li><strong>Tower of Hanoi:</strong> Moving disks between pegs using smaller sub-moves.</li>
+                <li><strong>Basis Step:</strong> <code>F(0) = 1</code></li>
+                <li><strong>Recursive Step:</strong> <code>F(n+1) = (n+1)F(n)</code></li>
             </ul>
+            <p><em>Verification for F(5):</em><br>
+            <code>F(5) = 5 &times; F(4) = 5 &times; 4 &times; F(3) = 5 &times; 4 &times; 3 &times; F(2) = 5 &times; 4 &times; 3 &times; 2 &times; F(1) = 5 &times; 4 &times; 3 &times; 2 &times; 1 &times; F(0) = 120 &times; 1 = 120.</code></p>
         </div>
+
+        <div class="concept-box">
+            <h3>5. Fibonacci Numbers</h3>
+            <p>The Fibonacci sequence provides a classic example of a recursive definition where the recursive step depends on <em>two</em> previous values rather than just one.</p>
+            <p><strong>Definition:</strong></p>
+            <ul>
+                <li><strong>Basis Step:</strong> <code>f₀ = 0</code> and <code>f₁ = 1</code></li>
+                <li><strong>Recursive Step:</strong> <code>fₙ = fₙ₋₁ + fₙ₋₂</code> for <code>n = 2, 3, 4, ...</code></li>
+            </ul>
+
+            <p><strong>Example:</strong> Find <code>f₂, f₃, f₄, f₅, f₆</code>.</p>
+            <ul>
+                <li><code>f₂ = f₁ + f₀ = 1 + 0 = 1</code></li>
+                <li><code>f₃ = f₂ + f₁ = 1 + 1 = 2</code></li>
+                <li><code>f₄ = f₃ + f₂ = 2 + 1 = 3</code></li>
+                <li><code>f₅ = f₄ + f₃ = 3 + 2 = 5</code></li>
+                <li><code>f₆ = f₅ + f₄ = 5 + 3 = 8</code></li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/fibonacci-sequence.png" alt="Fibonacci Sequence Generation" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 2: The Fibonacci sequence builds upon previous subproblems.</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>6. Recursive Algorithms</h3>
+            <p><strong>Definition:</strong> An algorithm is called <em>recursive</em> if it solves a problem by reducing it to an instance of the exact same problem but with a smaller input.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>7. Algorithm 1: Recursive Computing (Power)</h3>
+            <p><strong>Example:</strong> Give a recursive algorithm for computing <code>aⁿ</code>, where <em>a</em> is a nonzero real number and <em>n</em> is a non-negative integer.</p>
+            <p><strong>Solution:</strong> Use the recursive definition of <code>aⁿ</code>.</p>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                <strong>procedure</strong> power(a: nonzero real number, n: nonnegative integer)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> n = 0 <strong>then return</strong> 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>else return</strong> a * power(a, n - 1)<br>
+                <em>{output is aⁿ}</em>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>8. Algorithm 2: Recursive GCD Algorithm</h3>
+            <p><strong>Example:</strong> Give a recursive algorithm for computing the greatest common divisor (GCD) of two nonnegative integers <em>a</em> and <em>b</em> with <code>a &lt; b</code>.</p>
+            <p><strong>Solution:</strong> Use the reduction property <code>gcd(a, b) = gcd(b mod a, a)</code> and the base condition <code>gcd(0, b) = b</code> when <code>b &gt; 0</code>.</p>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                <strong>procedure</strong> gcd(a, b: nonnegative integers with a &lt; b)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> a = 0 <strong>then return</strong> b<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>else return</strong> gcd(b mod a, a)<br>
+                <em>{output is gcd(a, b)}</em>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>9. Algorithm 3: Recursive Binary Search Algorithm</h3>
+            <p><strong>Example:</strong> Construct a recursive version of a binary search algorithm.</p>
+            <p><strong>Solution:</strong> Assume we have an increasing sequence of integers <code>a₁, a₂, ..., aₙ</code>. Initially <em>i</em> is 1 and <em>j</em> is n. We are searching for element <em>x</em>.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/binary-search.png" alt="Binary Search Recursive Division" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 3: Binary search recursively splits the array in half.</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                <strong>procedure</strong> binary_search(i, j, x: integers, 1 &le; i &le; j &le; n)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;m := &lfloor;(i + j) / 2&rfloor;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> x = aₘ <strong>then</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> m<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>else if</strong> (x &lt; aₘ and i &lt; m) <strong>then</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> binary_search(i, m - 1, x)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>else if</strong> (x &gt; aₘ and j &gt; m) <strong>then</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> binary_search(m + 1, j, x)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>else</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> 0<br>
+                <em>{output is location of x in sequence, or 0 if not found}</em>
+            </div>
+        </div>
+
+        <a href="Tutorials/tutorial-9.html" class="magical-btn">⚡ Practice These Spells (Tutorial 9)</a>
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
             GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
         </p>
     </footer>
