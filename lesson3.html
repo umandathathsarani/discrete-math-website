@@ -9,12 +9,12 @@
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
         <h1>Lecture 3: Sequences & Summations</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -29,31 +29,99 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 3: Sequences & Summations</h2>
+        <h2>Lecture 3: Sequences & Summations (Complete Notes)</h2>
 
         <div class="concept-box">
-            <h3>1. Sequences</h3>
-            <p>An ordered list of elements where duplicates are allowed and order matters.</p>
+            <h3>1. Introduction to Sequences</h3>
+            <p>A <strong>Sequence</strong> is an ordered list of elements. It is similar to a Set, but with two major differences:</p>
             <ul>
-                <li><strong>Arithmetic Sequence:</strong> Increases by a constant difference (d). Formula: a<sub>n</sub> = a + (n-1)d</li>
-                <li><strong>Geometric Sequence:</strong> Increases by a constant factor (common ratio, r). Formula: u<sub>n</sub> = ar<sup>n-1</sup></li>
+                <li><strong>Duplicates are allowed:</strong> (e.g., 1, 1, 2, 3, 5...)</li>
+                <li><strong>Order matters:</strong> The position of the element is strictly defined.</li>
+            </ul>
+            <p><strong>Notation:</strong></p>
+            <ul>
+                <li><strong>a<sub>n</sub></strong> represents a specific term in the sequence.</li>
+                <li><strong>{a<sub>n</sub>}</strong> means the entire sequence (note: it uses the same curly bracket notation as sets!).</li>
+                <li>Sequences are generally indexed starting from 1 (i.e., a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>...).</li>
+            </ul>
+            <p><strong>Examples:</strong><br>
+            If a<sub>n</sub> = 3n, the sequence is 3, 6, 9, 12...<br>
+            If b<sub>n</sub> = 2<sup>n</sup>, the sequence is 2, 4, 8, 16, 32...</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>2. Arithmetic Sequences</h3>
+            <p>An arithmetic sequence (or progression) increases or decreases by a <strong>constant amount</strong> (called the common difference, <em>d</em>).</p>
+            <ul>
+                <li><strong>General Form:</strong> a, a+d, a+2d, a+3d...</li>
+                <li><strong>The n<sup>th</sup> Term Formula:</strong> T<sub>n</sub> = a + (n - 1)d</li>
+                <li><strong>Sum of the first n terms (S<sub>n</sub>):</strong><br>
+                S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d] <br>
+                <em>OR</em> <br>
+                S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [a + l] (where <em>l</em> is the last term)</li>
+            </ul>
+            <div class="ravenclaw-note">
+                <strong>🪄 Wizard's Guide to Variables:</strong> <br>
+                <strong>a</strong> = The first term <br>
+                <strong>d</strong> = The common difference (Term 2 - Term 1) <br>
+                <strong>n</strong> = The position number of the term
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. Geometric Sequences</h3>
+            <p>A geometric sequence (or G.P.) increases or decreases by a <strong>constant factor</strong>. Each number is multiplied by the previous number by a common ratio (<em>r</em>).</p>
+            <ul>
+                <li><strong>General Form:</strong> a, ar, ar<sup>2</sup>, ar<sup>3</sup>...</li>
+                <li><strong>The n<sup>th</sup> Term Formula:</strong> u<sub>n</sub> = ar<sup>n - 1</sup></li>
+                <li><strong>Sum of the first n terms (S<sub>n</sub>):</strong><br>
+                If r &lt; 1: S<sub>n</sub> = <sup>a(1 - r<sup>n</sup>)</sup> &frasl; <sub>(1 - r)</sub><br>
+                If r &gt; 1: S<sub>n</sub> = <sup>a(r<sup>n</sup> - 1)</sup> &frasl; <sub>(r - 1)</sub></li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Summations (&Sigma;)</h3>
-            <p>Sigma notation concisely represents the sum of a sequence of numbers.</p>
-            <p><strong>&Sigma; (from j=m to n) a<sub>j</sub> = a<sub>m</sub> + a<sub>m+1</sub> + ... + a<sub>n</sub></strong></p>
-            <p><em>Formulas:</em> Sum of a geometric progression: S<sub>n</sub> = a(1-r<sup>n</sup>) / (1-r) where r &ne; 1.</p>
+            <h3>4. Summations (&Sigma;)</h3>
+            <p>Sigma Notation is a concise mathematical way to represent the sum of a sequence of numbers.</p>
+            <p style="font-size: 1.2rem; text-align: center; margin: 15px 0;">
+                <strong>&Sigma;<sub>(j=m to n)</sub> a<sub>j</sub> = a<sub>m</sub> + a<sub>m+1</sub> + a<sub>m+2</sub> + ... + a<sub>n</sub></strong>
+            </p>
+            
+            <h4 style="color: #740001; border-bottom: 1px solid #d3a625; padding-bottom: 5px;">🪄 Expansion Examples</h4>
+            <ul>
+                <li><strong>a) &Sigma;<sub>(i=0 to 3)</sub> i</strong> = 0 + 1 + 2 + 3 = <strong>6</strong></li>
+                <li><strong>b) &Sigma;<sub>(i=1 to 4)</sub> (i<sup>2</sup> + 3)</strong> = (1<sup>2</sup>+3) + (2<sup>2</sup>+3) + (3<sup>2</sup>+3) + (4<sup>2</sup>+3) <br> = 4 + 7 + 12 + 19 = <strong>42</strong></li>
+                <li><strong>c) &Sigma;<sub>(i=1 to 3)</sub> 4</strong> = 4 + 4 + 4 = <strong>12</strong> <em>(Since there is no 'i' in the formula, you just add the constant 4 three times)</em>.</li>
+            </ul>
         </div>
+
+        <div class="concept-box">
+            <h3>5. Factorials (!)</h3>
+            <p>The factorial of a number is the product of all the whole numbers from that number down to 1.</p>
+            <p><strong>Formula:</strong> n! = n(n-1)(n-2)...(2)(1)</p>
+            
+            <div class="ravenclaw-note">
+                <strong>🪄 Special Case Rule:</strong> By mathematical definition, <strong>0! = 1</strong>.
+            </div>
+
+            <h4 style="color: #740001; border-bottom: 1px solid #d3a625; padding-bottom: 5px; margin-top: 15px;">🪄 Calculation Examples</h4>
+            <ul>
+                <li><strong>5!</strong> = 5 &times; 4 &times; 3 &times; 2 &times; 1 = <strong>120</strong></li>
+                <li><strong>7!</strong> = 7 &times; 6 &times; 5 &times; 4 &times; 3 &times; 2 &times; 1 = <strong>5040</strong></li>
+                <li><strong>n! / (n-2)!</strong> = [n(n-1)(n-2)!] / (n-2)! = <strong>n(n-1)</strong> or <strong>n<sup>2</sup> - n</strong></li>
+            </ul>
+        </div>
+
+        <a href="Tutorials/tutorial-3.html" class="magical-btn">⚡ Practice These Spells (Tutorial 3)</a>
+
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
-            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener noreferrer">umandathathsarani</a>
         </p>
     </footer>
 

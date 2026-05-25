@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 3: Sequences & Summations Practice</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 3: Sequences & Summations</h1>
+        <p>Test Your Knowledge Before the O.W.L. Exams</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Sequences & Summations: Master Practice Bank</h2>
+        <p>Attempt to solve each problem on a piece of parchment before revealing the magical answer below it. A true wizard tests their limits!</p>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Question 1: Sets vs. Sequences</h3>
+                <p>Name two primary differences between a Set and a Sequence.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. In a sequence, <strong>order matters</strong> (it is an ordered list).<br>
+                    2. In a sequence, <strong>duplicates are allowed</strong> (e.g., 1, 1, 2, 3...).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Notation</h3>
+                <p>If you see the notation <strong>{a<sub>n</sub>}</strong> in discrete mathematics, what does it represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It represents the <strong>entire sequence</strong>. (Whereas a<sub>n</sub> without the braces refers to a single specific term in the sequence).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Generating a Sequence</h3>
+                <p>Find the first four terms of the sequence given by the formula <strong>a<sub>n</sub> = 3n</strong>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Since sequences generally index from n = 1:<br>
+                    a<sub>1</sub> = 3(1) = 3<br>
+                    a<sub>2</sub> = 3(2) = 6<br>
+                    a<sub>3</sub> = 3(3) = 9<br>
+                    a<sub>4</sub> = 3(4) = 12<br>
+                    The sequence is: <strong>3, 6, 9, 12...</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Arithmetic Sequence Definition</h3>
+                <p>What defines an Arithmetic Sequence?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    An arithmetic sequence increases or decreases by a <strong>constant amount</strong> (addition or subtraction), known as the common difference (d).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: Finding the Common Difference</h3>
+                <p>What is the common difference (<em>d</em>) of the arithmetic sequence: 7, 3, -1, -5...?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    d = Term 2 - Term 1 <br>
+                    d = 3 - 7 = <strong>-4</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Arithmetic n<sup>th</sup> Term</h3>
+                <p>What is the formula to find the n<sup>th</sup> term (T<sub>n</sub>) of an Arithmetic Progression?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>T<sub>n</sub> = a + (n - 1)d</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: Arithmetic Calculation</h3>
+                <p>Find the 10th term of the arithmetic sequence: 5, 8, 11, 14...</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    a = 5, d = 3, n = 10<br>
+                    T<sub>10</sub> = 5 + (10 - 1)3<br>
+                    T<sub>10</sub> = 5 + (9)(3)<br>
+                    T<sub>10</sub> = 5 + 27 = <strong>32</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Geometric Sequence Definition</h3>
+                <p>What defines a Geometric Sequence?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A geometric sequence increases or decreases by a <strong>constant factor</strong> (multiplication or division), known as the common ratio (r).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: Finding the Common Ratio</h3>
+                <p>What is the common ratio (<em>r</em>) of the geometric sequence: 2, 10, 50, 250...?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    r = Term 2 / Term 1 <br>
+                    r = 10 / 2 = <strong>5</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: Geometric n<sup>th</sup> Term</h3>
+                <p>What is the formula to find the n<sup>th</sup> term (u<sub>n</sub>) of a Geometric Progression?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>u<sub>n</sub> = ar<sup>n - 1</sup></strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Geometric Calculation</h3>
+                <p>Find the 6th term of the sequence given by <strong>b<sub>n</sub> = 2<sup>n</sup></strong>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    b<sub>6</sub> = 2<sup>6</sup><br>
+                    b<sub>6</sub> = <strong>64</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Arithmetic Sum Formula</h3>
+                <p>What are the two formulas used to find the sum (S<sub>n</sub>) of an Arithmetic sequence?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. S<sub>n</sub> = (n/2) [2a + (n - 1)d]<br>
+                    2. S<sub>n</sub> = (n/2) [a + l] (where l is the last term)</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Geometric Sum Formula</h3>
+                <p>Write the formula for the sum (S<sub>n</sub>) of a Geometric sequence where the ratio r is greater than 1.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>S<sub>n</sub> = a(r<sup>n</sup> - 1) / (r - 1)</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Expanding Sigma Notation I</h3>
+                <p>Expand and solve: <strong>&Sigma;<sub>(i=0 to 3)</sub> i</strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    0 + 1 + 2 + 3 = <strong>6</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: Expanding Sigma Notation II</h3>
+                <p>Expand and solve: <strong>&Sigma;<sub>(i=1 to 4)</sub> (i<sup>2</sup> + 3)</strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    = (1² + 3) + (2² + 3) + (3² + 3) + (4² + 3)<br>
+                    = (4) + (7) + (12) + (19)<br>
+                    = <strong>42</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 16: Expanding Sigma Notation III</h3>
+                <p>Expand and solve: <strong>&Sigma;<sub>(i=1 to 3)</sub> 4</strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Because there is no variable 'i' to plug numbers into, you just repeat the constant 4 for each step (1, 2, and 3):<br>
+                    = 4 + 4 + 4 = <strong>12</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 17: Factorial Definition</h3>
+                <p>How is <strong>n!</strong> mathematically defined?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is the product of all whole numbers from n down to 1.<br>
+                    <strong>n! = n(n-1)(n-2)...(2)(1)</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 18: Special Factorial Rule</h3>
+                <p>What is the value of <strong>0!</strong> ?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>1</strong>. (This is a special mathematical definition).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 19: Calculating Basic Factorials</h3>
+                <p>Calculate the exact values for <strong>5!</strong> and <strong>7!</strong>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    5! = 5 * 4 * 3 * 2 * 1 = <strong>120</strong><br>
+                    7! = 7 * 6 * 5 * 4 * 3 * 2 * 1 = <strong>5040</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 20: Simplifying Factorial Algebra</h3>
+                <p>Simplify the algebraic expression: <strong>n! / (n-2)!</strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Expand the top part until it matches the bottom part:<br>
+                    [n * (n-1) * (n-2)!] / (n-2)!<br>
+                    The (n-2)! terms cancel out, leaving:<br>
+                    <strong>n(n - 1)</strong> or <strong>n² - n</strong></p>
+                </details>
+            </div>
+
+        </div>
+        
+        <a href="../lesson3.html" class="magical-btn" style="background: #2e0b0b; border-color:#d3a625;">🔙 Return to Lecture 3</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>
