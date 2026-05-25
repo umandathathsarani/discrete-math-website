@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 8: Binary Trees, Heaps, and Spanning Trees</title>
+    <title>Lesson 8: Discrete Mathematics - Trees & Heaps</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
-        <h1>Lecture 8: Binary Trees, Heaps, and Spanning Trees</h1>
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>Lecture 8: Trees, Heaps & Spanning Trees</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -29,29 +29,140 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 8: Binary Trees, Heaps, and Spanning Trees</h2>
+        <h2>Lecture 8: Trees, Heaps & Minimum Spanning Trees</h2>
 
         <div class="concept-box">
-            <h3>1. Tree Anatomy</h3>
-            <p>A connected undirected graph with no simple circuits. A <strong>Rooted Tree</strong> has one designated top vertex.</p>
+            <h3>1. Introduction to Trees</h3>
+            <p>An undirected graph is defined as a <strong>Tree</strong> if and only if there is a unique simple path between any two of its vertices. By definition, a tree contains no cycles.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>2. Rooted Trees</h3>
+            <p>A <strong>Rooted Tree</strong> is a tree in which one specific vertex has been designated as the <em>root</em>, and every edge is directed away from the root.</p>
             <ul>
-                <li><strong>Binary Tree:</strong> Every internal node has at most two children.</li>
-                <li><strong>Full vs. Complete:</strong> A Full tree has exactly 0 or 2 children per node. A Complete tree is filled left-to-right on the bottom level.</li>
+                <li>Components are named after natural trees: <strong>root</strong>, <strong>branches</strong>, and <strong>leaves</strong>.</li>
+                <li>Traditionally drawn with the root at the top and branching downwards.</li>
+                <li><strong>Parent/Child Relationship:</strong> A node pointing down is a parent, and the nodes it points to are its children.</li>
+                <li><strong>Leaf Node:</strong> A node that has no children.</li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/rooted-tree.png" alt="Rooted Tree Structure" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 1: A Rooted Tree showing Root, Branches, and Leaves.</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. Binary and Complete Binary Trees</h3>
+            <p><strong>Binary Tree:</strong> A rooted tree where every internal vertex has <strong>at most two children</strong>. The children are specifically distinguished as a <em>left child</em> and a <em>right child</em>.</p>
+            <p><strong>Complete Binary Tree:</strong> A strict version of a binary tree where every internal vertex has <strong>exactly two children</strong>, and absolutely all leaves are at the exact same level (depth).</p>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/binary-trees.png" alt="Binary vs Complete Binary Tree" style="max-width: 100%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 2: Standard Binary Tree vs. Complete Binary Tree.</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>4. Essential Tree Terminology</h3>
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>Degree of a Node:</strong> The number of subtrees of a node.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Degree of a Tree:</strong> The maximum degree of any node in the tree.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Ancestors & Descendants:</strong> Ancestors of a node are all nodes along the path from the root to that node. Descendants are all nodes in the subtrees originating from that node.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Level (Depth):</strong> The level of a node is the number of edges along the path from the root to that node. The root is at level 0.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Height:</strong> The maximum level of any node in the tree.
+                    </div>
+                </li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Heaps & Prim's Algorithm</h3>
-            <p><strong>Max/Min Heap:</strong> A complete binary tree where the parent node is strictly greater than (or less than) its children.</p>
-            <p><strong>Prim's Algorithm:</strong> A greedy algorithm to find a Minimum Spanning Tree. It repeatedly adds the lowest-weight edge that connects a vertex inside the tree to a vertex outside.</p>
+            <h3>5. Application: Arithmetic Expressions</h3>
+            <p>Trees are widely used in Computer Science. One major application is representing complex arithmetic expressions.</p>
+            <ul>
+                <li><strong>Internal Vertices</strong> represent mathematical operators (+, -, *, /).</li>
+                <li><strong>Leaves (External Vertices)</strong> represent the operands (numbers or variables).</li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/expression-tree.png" alt="Expression Tree" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 3: An Arithmetic Expression represented as a Tree.</p>
+            </div>
         </div>
+
+        <div class="concept-box">
+            <h3>6. Tree Traversals</h3>
+            <p>By traversing an arithmetic expression tree in different orders, we can extract three different standard notations:</p>
+            <ul>
+                <li><strong>Pre-order Traversal (Prefix Notation):</strong> Root &rarr; Left &rarr; Right.</li>
+                <li><strong>In-order Traversal (Infix Notation):</strong> Left &rarr; Root &rarr; Right.</li>
+                <li><strong>Post-order Traversal (Postfix Notation):</strong> Left &rarr; Right &rarr; Root.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>7. Heaps</h3>
+            <p>A Heap is a specialized <strong>complete binary tree</strong> data structure that satisfies the heap property:</p>
+            <ul>
+                <li><strong>Max-Heap:</strong> Every parent node contains a value greater than or equal to the values of its children. The maximum element is always at the root.</li>
+                <li><strong>Min-Heap:</strong> Every parent node contains a value less than or equal to the values of its children. The minimum element is always at the root.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>8. Spanning Trees</h3>
+            <p>A <strong>Spanning Tree</strong> of a simple graph <em>G</em> is a subgraph that is a tree and contains absolutely all the vertices of <em>G</em>.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>9. Minimum Spanning Trees (MST) & Prim's Algorithm</h3>
+            <p>In a connected, <em>weighted</em> graph, a Minimum Spanning Tree is a spanning tree whose sum of edge weights is as small as possible.</p>
+            
+            <h4>Prim's Algorithm</h4>
+            <p>Prim's is a <strong>Greedy Algorithm</strong> used to find the Minimum Spanning Tree. It builds the tree one vertex at a time by always making the locally optimal choice.</p>
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                <strong>Prim's Algorithm Steps:</strong><br>
+                1. Let V be the set of vertices in the MST, initially containing one arbitrary starting node.<br>
+                2. Let E' be the set of edges in the MST, initially empty.<br>
+                3. <strong>Repeat until all vertices have been chosen:</strong><br>
+                &nbsp;&nbsp;&nbsp; Choose a vertex <em>v</em> that is NOT currently in V.<br>
+                &nbsp;&nbsp;&nbsp; Ensure that the edge connecting <em>v</em> to a vertex already inside V has the <strong>minimal possible weight</strong> (Greedy choice!).<br>
+                &nbsp;&nbsp;&nbsp; Add <em>v</em> to V, and add the edge to E'.<br>
+                4. The final MST cost is the sum of all weights in E'.
+            </div>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/prims-algorithm.png" alt="Prim's Algorithm MST" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 4: A Minimum Spanning Tree constructed using Prim's Algorithm.</p>
+            </div>
+        </div>
+
+        <a href="Tutorials/tutorial-8.html" class="magical-btn">⚡ Practice These Spells (Tutorial 8)</a>
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
             GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
         </p>
     </footer>

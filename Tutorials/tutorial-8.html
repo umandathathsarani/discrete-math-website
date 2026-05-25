@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 8: Trees & Heaps Practice</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 8: Trees & Heaps</h1>
+        <p>Test Your Knowledge Before the O.W.L. Exams</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Trees & Algorithms: Master Practice Bank</h2>
+        <p>Attempt to solve each problem on a piece of parchment before revealing the magical answer below it. A true Ravenclaw tests their limits!</p>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Question 1: Core Tree Definition</h3>
+                <p>What specifically defines an undirected graph as a Tree?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is an undirected graph where there is a <strong>unique simple path</strong> between any two of its vertices (which means it contains no cycles).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Rooted Tree Edges</h3>
+                <p>In a Rooted Tree, how are the edges directed relative to the root?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Every edge is directed <strong>away</strong> from the root.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Identifying Leaves</h3>
+                <p>What is the definition of a "leaf" in a rooted tree?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A leaf is a node that has <strong>no children</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Binary Trees</h3>
+                <p>What makes a rooted tree a "Binary Tree"?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Every internal vertex has <strong>at most two children</strong> (a left child and a right child).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: Complete Binary Trees</h3>
+                <p>What two conditions must be met for a Binary Tree to be considered "Complete"?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. Every internal vertex has <strong>exactly two</strong> children.<br>
+                    2. Absolutely all leaves are at the <strong>exact same level</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Node Levels</h3>
+                <p>If you are at the root of a tree, what level are you currently on?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Level <strong>0</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: Tree Height</h3>
+                <p>How do you find the "height" of a tree?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The height is the <strong>maximum level</strong> (or depth) of any node within the tree.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Node Degree</h3>
+                <p>In tree terminology, what does the "degree" of a specific node mean?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is the number of <strong>subtrees</strong> originating from that node (the number of its children).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: Descendants</h3>
+                <p>What nodes make up the descendants of a given node X?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    All the nodes located in the subtrees originating from node X (its children, grandchildren, etc.).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: Expression Trees - Leaves</h3>
+                <p>When modeling an arithmetic expression as a tree, what do the leaves (external vertices) represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    They represent the <strong>operands</strong> (the numbers or variables).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Expression Trees - Internal Nodes</h3>
+                <p>Following the previous question, what do the internal vertices represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    They represent the mathematical <strong>operators</strong> (+, -, *, /).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Pre-order Traversal</h3>
+                <p>What is the exact sequence of a Pre-order Traversal?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Root &rarr; Left &rarr; Right</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Infix Notation Traversal</h3>
+                <p>Which tree traversal method produces standard Infix Notation?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>In-order Traversal</strong> (Left &rarr; Root &rarr; Right).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Post-order Traversal</h3>
+                <p>What is the exact sequence of a Post-order Traversal?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Left &rarr; Right &rarr; Root</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: Heaps</h3>
+                <p>What specific type of graph structure must a Heap be built upon?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A <strong>Complete Binary Tree</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 16: Max-Heap Property</h3>
+                <p>In a Max-Heap, what is the rule regarding a parent node and its children?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Every parent node must contain a value <strong>greater than or equal to</strong> the values of its children.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 17: Min-Heap Root</h3>
+                <p>In a Min-Heap, where is the smallest value in the entire structure guaranteed to be?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is always located at the <strong>root</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 18: Spanning Trees</h3>
+                <p>What makes a subgraph a "Spanning Tree" of graph G?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The subgraph must be a tree, and it must contain <strong>absolutely all the vertices</strong> of the original graph G.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 19: Minimum Spanning Tree</h3>
+                <p>What is a Minimum Spanning Tree (MST)?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    In a weighted graph, it is a spanning tree whose <strong>sum of edge weights is as small as possible</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 20: Prim's Algorithm Strategy</h3>
+                <p>In Prim's Algorithm, how is the next vertex chosen to be added to the Minimum Spanning Tree?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is a <strong>greedy</strong> choice: it selects a vertex not yet in the tree that is connected by the edge with the <strong>absolute minimal weight</strong> to a vertex already in the tree.</p>
+                </details>
+            </div>
+
+        </div>
+        
+        <a href="../lesson8.html" class="magical-btn" style="background: #1a2c42; border-color:#c0803e;">🔙 Return to Lecture 8</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>
