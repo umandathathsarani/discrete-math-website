@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 10: Algorithm Analysis Practice</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 10: Analysis of Algorithms</h1>
+        <p>Test Your Knowledge Before the O.W.L. Exams</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Algorithms: Master Practice Bank</h2>
+        <p>Attempt to solve each problem on a piece of parchment before revealing the magical answer below it. A true Ravenclaw tests their limits!</p>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Question 1: Algorithm Definition</h3>
+                <p>What is the fundamental definition of an Algorithm?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is a <strong>step-by-step procedure</strong> for solving a specific problem, acting much like a set of instructions or a recipe.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Measuring Efficiency</h3>
+                <p>Why do computer scientists avoid using actual time in seconds to measure the speed of an algorithm?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Actual time depends too heavily on variables like <strong>hardware capabilities, programming languages, and specific compiler implementations</strong>. Instead, we count the number of basic operations relative to the input size.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Big O Meaning</h3>
+                <p>In asymptotic notation, what does Big O (<code>O</code>) mathematically signify?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It signifies an <strong>asymptotic upper bound</strong> (meaning "less than or equal to" the given growth rate).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Big Omega Meaning</h3>
+                <p>What does Big Omega (<code>&Omega;</code>) signify?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It signifies an <strong>asymptotic lower bound</strong> (meaning "greater than or equal to" the given growth rate).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: Big Theta Meaning</h3>
+                <p>What does Big Theta (<code>&Theta;</code>) signify?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It signifies an <strong>asymptotically tight bound</strong> (meaning the function grows exactly at the specified rate).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Simplifying Polynomials</h3>
+                <p>When using Big O notation, how do you simplify the expression <code>3n<sup>2</sup> + 20n + 500</code>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>O(n<sup>2</sup>)</strong>. We drop all constants and lower-order terms, keeping only the dominant factor.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: Order of Growth</h3>
+                <p>Which grows significantly faster as <em>n</em> approaches infinity: <code>O(n<sup>3</sup>)</code> or <code>O(2<sup>n</sup>)</code>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>O(2<sup>n</sup>)</strong>. Exponential growth rapidly outpaces polynomial growth.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Finding Big O</h3>
+                <p>What is the Big O value for the function <code>f(n) = 2<sup>n</sup> + n<sup>2</sup> + 8n + 7</code>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>O(2<sup>n</sup>)</strong>, because 2<sup>n</sup> is the highest order term.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: Basic Operations</h3>
+                <p>An algorithm contains an assignment (s=1), an addition, a multiplication, and a comparison. What is its time complexity?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>O(1)</strong>, also known as constant time. It does not scale with any input <em>n</em>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: Nested Loops</h3>
+                <p>A code fragment has a loop running from 1 to n. Inside it, a second loop runs from 1 to i. What is the Big O complexity?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>O(n<sup>2</sup>)</strong>. The inner loop executes a total of roughly n(n+1)/2 times.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Recurrence Relation</h3>
+                <p>What is a recurrence relation in the context of algorithms?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    An equation or inequality that describes the running time of a recursive function <strong>in terms of its value on smaller inputs</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Solving Recurrences</h3>
+                <p>Name the three primary methods taught to solve recurrence relations.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. Substitution Method<br>2. Recursion-tree Method<br>3. Master Method (Master Theorem)</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Substitution Method</h3>
+                <p>The Substitution Method requires you to make a mathematical guess. What technique is then used to prove that guess is correct?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Mathematical Induction</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Recursion Tree Method</h3>
+                <p>What is the primary purpose of drawing a Recursion Tree?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    To visualize the cost of subproblems at each level and sum them up, generating a <strong>highly accurate guess</strong> that can be verified later.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: Master Theorem Equation</h3>
+                <p>What specific mathematical form must a recurrence take to be solvable using the Master Method?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>T(n) = aT(n/b) + f(n)</strong>, where a &ge; 1 and b &gt; 1.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 16: Master Theorem - The Comparison</h3>
+                <p>When applying the Master Theorem, what two values are you fundamentally comparing against each other?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    You compare the cost function <strong>f(n)</strong> against the calculated watershed value <strong>n<sup>log<sub>b</sub>a</sup></strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 17: Master Theorem - Case 1</h3>
+                <p>In the Master Theorem, if f(n) is polynomially <em>smaller</em> than n<sup>log<sub>b</sub>a</sup>, what is the final solution for T(n)?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 18: Master Theorem - Case 2</h3>
+                <p>In the Master Theorem, if f(n) is exactly equal to n<sup>log<sub>b</sub>a</sup>, what is the final solution for T(n)?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup> log n)</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 19: Master Theorem Practice</h3>
+                <p>Solve <code>T(n) = 9T(n/3) + n</code> using the Master Theorem.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Here a=9, b=3. Therefore n<sup>log<sub>3</sub>9</sup> = n<sup>2</sup>. Since f(n) = n is polynomially smaller than n<sup>2</sup>, this is Case 1. The solution is <strong>&Theta;(n<sup>2</sup>)</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 20: Binary Search Recurrence</h3>
+                <p>The Binary Search recurrence is <code>T(n) = T(n/2) + &Theta;(1)</code>. Using the Master Method, what is its tight asymptotic bound?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Here a=1, b=2. Therefore n<sup>log<sub>2</sub>1</sup> = n<sup>0</sup> = 1. Since f(n) = &Theta;(1) is exactly equal to n<sup>0</sup>, this is Case 2. The solution is <strong>&Theta;(log n)</strong>.</p>
+                </details>
+            </div>
+
+        </div>
+        
+        <a href="../lesson10.html" class="magical-btn" style="background: #1a2c42; border-color:#c0803e;">🔙 Return to Lecture 10</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>

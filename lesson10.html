@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 10: Analysis of Algorithms</title>
+    <title>Lesson 10: Discrete Mathematics - Analysis of Algorithms</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
         <h1>Lecture 10: Analysis of Algorithms</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -32,27 +32,186 @@
         <h2>Lecture 10: Analysis of Algorithms</h2>
 
         <div class="concept-box">
-            <h3>1. Algorithm Complexity</h3>
-            <p>We analyze algorithms to predict performance independent of hardware, counting basic operations instead of seconds.</p>
+            <h3>1. Introduction to Algorithms</h3>
+            <p>An <strong>Algorithm</strong> is a step-by-step procedure for solving a problem, much like a recipe or set of instructions (e.g., sorting lists, searching for items, calculating values).</p>
+            
+            <h4>Why Analyze Algorithms?</h4>
             <ul>
-                <li><strong>Time Complexity:</strong> Running time as a function of input size.</li>
-                <li><strong>Space Complexity:</strong> Memory required as a function of input size.</li>
-                <li><strong>Asymptotic Bounds:</strong> Big-O (Upper bound), Big-Omega (Lower bound), Big-Theta (Tight bound).</li>
+                <li>To predict performance before actual implementation.</li>
+                <li>To compare different approaches and choose the right tool for the job.</li>
+                <li>To identify bottlenecks and opportunities for improvement.</li>
+            </ul>
+
+            <h4>Key Questions & How We Measure</h4>
+            <p>We ask: How long will this algorithm take (Time complexity)? How much memory will it need (Space complexity)? Does it scale well?</p>
+            <p><strong>Crucial Note:</strong> We do NOT measure with actual time in seconds. Actual time depends heavily on hardware, programming languages, and specific implementations. Instead, we <strong>count basic operations</strong> (comparisons, arithmetic operations, assignments) and focus on how these grow with the input size.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>2. Why We Need Asymptotic Notation</h3>
+            <p>Asymptotic notation provides a mathematical framework for analyzing algorithms due to several fundamental reasons:</p>
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>Focus on Scalability & Hardware Independence:</strong> As input sizes increase dramatically, true efficiency differences emerge. Asymptotic notation abstracts away hardware-specific factors, allowing fair, universal comparisons.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Simplifies Analysis:</strong> It ignores constant factors and eliminates lower-order terms. It concentrates on the dominant factor determining long-term performance. (Example: 3n<sup>2</sup> + 20n + 500 simplifies to &Theta;(n<sup>2</sup>) because n<sup>2</sup> dominates as n grows large).
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Theoretical Foundation:</strong> Creates a standardized vocabulary and mathematical rigor, preventing us from relying solely on empirical testing.
+                    </div>
+                </li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. The Master Theorem</h3>
-            <p>Solves recurrence relations of the form: <strong>T(n) = aT(n/b) + f(n)</strong></p>
-            <p>Compares f(n) to n<sup>log<sub>b</sub>a</sup> to determine the tight asymptotic bound across three distinct cases.</p>
+            <h3>3. Asymptotic Notations</h3>
+            <p>These notations describe the behavior of functions in the limit (as input sizes grow towards infinity), allowing us to compare the "sizes" of functions.</p>
+            <ul>
+                <li><strong>O (Big O):</strong> Means "less than or equal to" (&le;). Gives an asymptotic upper bound. <em>Example: If an algorithm is O(n<sup>2</sup>), it won't grow faster than n<sup>2</sup>.</em></li>
+                <li><strong>&Omega; (Big Omega):</strong> Means "greater than or equal to" (&ge;). Gives an asymptotic lower bound. <em>Example: If an algorithm is &Omega;(n), it grows at least as fast as n.</em></li>
+                <li><strong>&Theta; (Big Theta):</strong> Means "equal to" (=). Gives a tight bound. <em>Example: If an algorithm is &Theta;(n log n), it grows exactly at the rate of n log n.</em></li>
+                <li><strong>o (Little o):</strong> Means "strictly less than" (&lt;). <em>Example: o(n<sup>2</sup>) grows strictly slower than n<sup>2</sup>.</em></li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/algo-functions-growth.png" alt="Graph of Function Growth Rates" style="max-width: 100%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 1: Common function growth rates (1, log n, n, n log n, n<sup>2</sup>, 2<sup>n</sup>, n!, n<sup>n</sup>).</p>
+            </div>
         </div>
+
+        <div class="concept-box">
+            <h3>4. Formalizing Big O-Notation</h3>
+            <p>Introduced by Paul Bachmann in 1892, we use Big O-notation to give an upper bound on a function.</p>
+            <p><strong>Definition:</strong> <code>O(g(n)) = { f(n) : there exist positive constants c and n<sub>0</sub> such that 0 &le; f(n) &le; c &middot; g(n) for all n &ge; n<sub>0</sub> }</code></p>
+            <p>If f(n) is in O(g(n)), we write <strong>f(n) = O(g(n))</strong>.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/algo-big-o.png" alt="Big O Notation Graph" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 2: After point n<sub>0</sub>, the function f(n) is always bounded above by c&middot;g(n).</p>
+            </div>
+
+            <h4>Polynomial Theorem</h4>
+            <p>In general: <code>a<sub>n</sub>x<sup>n</sup> + ... + a<sub>1</sub>x + a<sub>0</sub></code> is <strong>O(x<sup>n</sup>)</strong> for any real numbers and any non-negative n.</p>
+            
+            <h4>Examples of Big O Calculation</h4>
+            <ul>
+                <li><code>T(n) = 3 + 5n + 3n<sup>2</sup></code> &rarr; <strong>O(n<sup>2</sup>)</strong></li>
+                <li><code>f(n) = 2<sup>n</sup> + n<sup>2</sup> + 8n + 7</code> &rarr; <strong>O(2<sup>n</sup>)</strong></li>
+                <li><code>T(n) = n + log n + 6</code> &rarr; <strong>O(n)</strong></li>
+            </ul>
+
+            <h4>Code Fragment Example</h4>
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                for i &larr; 1 to n<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for j &larr; 1 to i<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Print j
+            </div>
+            <p>This fragment features a nested loop where the inner loop depends on the outer loop. The total executions sum to n(n+1)/2, which yields <strong>O(n<sup>2</sup>)</strong>.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>5. Recurrence Relations</h3>
+            <p>A recurrence relation is a mathematical function that defines the running time of a recursive function in terms of its value on smaller inputs.</p>
+            
+            <h4>Example: Factorial Function</h4>
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                int factorial(int n) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if (n == 0) return 1;          // Base case (Time c)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;else return (n * factorial(n-1)); // Recursive case (Time e + T(n-1))<br>
+                }
+            </div>
+            <p>The total time <strong>T(n) = c + e + T(n-1)</strong>. Solving this via the <em>iteration method</em> (repeated substitution) yields a linear time complexity.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>6. Methods for Solving Recurrences</h3>
+            <p>There are three primary methods used to solve recurrences mathematically:</p>
+            
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>1. The Substitution Method</strong><br>
+                        Guess the exact form of the solution, then use mathematical induction to find the constants and prove that the bound holds. For example, to prove T(n) = 2T(n/2) + n is O(n log n), we guess T(n) &le; c&middot;n log n and substitute it back into the recurrence to verify.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>2. The Recursion-Tree Method</strong><br>
+                        Draw out a tree where each node represents the cost of a single subproblem. Sum the costs across each level, and then sum all levels to determine the total cost. This is highly useful for generating a good "guess" for the Substitution method.
+                    </div>
+                </li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/algo-recursion-tree.png" alt="Recursion Tree Diagram" style="max-width: 100%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 3: Recursion tree for T(n) = 3T(n/4) + cn<sup>2</sup>. The total cost resolves to O(n<sup>2</sup>).</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>7. The Master Method / Master Theorem</h3>
+            <p>The Master Method applies specifically to recurrences of the form:</p>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold; background: rgba(211, 166, 37, 0.2); padding: 10px; border-radius: 5px;">
+                T(n) = aT(n/b) + f(n)
+            </p>
+            <p>Where <strong>a &ge; 1</strong> and <strong>b &gt; 1</strong> are constants, and f(n) is an asymptotically positive function. It describes dividing a problem into <em>a</em> subproblems, each of size <em>n/b</em>, with <em>f(n)</em> representing the cost to divide and combine.</p>
+
+            <p>To use the theorem, compare <strong>n<sup>log<sub>b</sub>a</sup></strong> against <strong>f(n)</strong>:</p>
+
+            <ul>
+                <li><strong>Case 1:</strong> If f(n) is polynomially <em>smaller</em> than n<sup>log<sub>b</sub>a</sup> (f(n) = O(n<sup>log<sub>b</sub>a - &epsilon;</sup>)).<br>
+                <strong>Solution:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)</li>
+                
+                <li><strong>Case 2:</strong> If f(n) is roughly <em>equal</em> to n<sup>log<sub>b</sub>a</sup> (f(n) = &Theta;(n<sup>log<sub>b</sub>a</sup> log<sup>k</sup> n)).<br>
+                <strong>Solution:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup> log<sup>k+1</sup> n)</li>
+                
+                <li><strong>Case 3:</strong> If f(n) is polynomially <em>greater</em> than n<sup>log<sub>b</sub>a</sup> (f(n) = &Omega;(n<sup>log<sub>b</sub>a + &epsilon;</sup>)), and a regularity condition holds.<br>
+                <strong>Solution:</strong> T(n) = &Theta;(f(n))</li>
+            </ul>
+
+            <h4>Master Theorem Examples</h4>
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>Example Case 1:</strong> T(n) = 9T(n/3) + n.<br>
+                        a = 9, b = 3, f(n) = n. Calculate n<sup>log<sub>3</sub>9</sup> = n<sup>2</sup>.<br>
+                        Since f(n) = n is polynomially smaller than n<sup>2</sup>, this is Case 1. <br>
+                        <strong>Result:</strong> T(n) = &Theta;(n<sup>2</sup>).
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Example Case 2:</strong> T(n) = T(2n/3) + 1.<br>
+                        a = 1, b = 3/2, f(n) = 1. Calculate n<sup>log<sub>3/2</sub>1</sup> = n<sup>0</sup> = 1.<br>
+                        Since f(n) = 1 is equal to n<sup>0</sup>, this is Case 2 (with k=0).<br>
+                        <strong>Result:</strong> T(n) = &Theta;(log n).
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Example Case 3:</strong> T(n) = 3T(n/4) + n log n.<br>
+                        a = 3, b = 4, f(n) = n log n. Calculate n<sup>log<sub>4</sub>3</sup> &approx; n<sup>0.793</sup>.<br>
+                        Since f(n) = n log n is polynomially strictly greater than n<sup>0.793</sup>, this is Case 3.<br>
+                        <strong>Result:</strong> T(n) = &Theta;(n log n).
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <a href="Tutorials/tutorial-10.html" class="magical-btn">⚡ Practice These Spells (Tutorial 10)</a>
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
             GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
         </p>
     </footer>
