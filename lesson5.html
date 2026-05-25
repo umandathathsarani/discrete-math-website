@@ -9,12 +9,12 @@
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
         <h1>Lecture 5: Combinations & Binomial Theorem</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -32,24 +32,46 @@
         <h2>Lecture 5: Combinations & Binomial Theorem</h2>
 
         <div class="concept-box">
-            <h3>1. Combinations</h3>
-            <p>An arrangement where <strong>order does NOT matter</strong>.</p>
-            <p><strong>C(n, r) = n! / (r! &times; (n-r)!)</strong></p>
-            <p><em>With Repetition:</em> Choosing r items from n types allows C(n+r-1, r) ways.</p>
+            <h3>1. What are Combinations?</h3>
+            <p>A combination is an unordered arrangement of objects. Unlike permutations, the order in which objects are arranged does not matter.</p>
         </div>
 
         <div class="concept-box">
-            <h3>2. Binomial Theorem & Pascal's Triangle</h3>
-            <p>The theorem provides a way to expand expressions of the form (x+y)<sup>n</sup>.</p>
-            <p><strong>Pascal's Identity:</strong> C(n, k) = C(n-1, k-1) + C(n-1, k). This forms Pascal's triangle, where each number is the sum of the two directly above it.</p>
+            <h3>2. Combinations without Repetition</h3>
+            <p>If we select <em>r</em> objects from a set of <em>n</em> distinct objects, the number of r-combinations is given by:</p>
+            <p style="text-align: center; font-size: 1.4rem;"><strong>C(n, r) = <sup>n!</sup> &frasl; <sub>r! &times; (n - r)!</sub></strong></p>
         </div>
+
+        <div class="concept-box">
+            <h3>3. Combinations with Repetition</h3>
+            <p>If items can be chosen multiple times, the number of r-combinations from a set of n elements is:</p>
+            <p style="text-align: center; font-size: 1.4rem;"><strong>C(n + r - 1, r) = <sup>(n + r - 1)!</sup> &frasl; <sub>r! &times; (n - 1)!</sub></strong></p>
+        </div>
+
+        <div class="concept-box">
+            <h3>4. Binomial Theorem</h3>
+            <p>The Binomial Theorem describes how to expand expressions of the form <strong>(x + y)<sup>n</sup></strong>. The expansion is given by:</p>
+            <p style="text-align: center; font-size: 1.4rem;"><strong>(x + y)<sup>n</sup> = &Sigma;<sub>k=0 to n</sub> C(n, k) x<sup>n-k</sup> y<sup>k</sup></strong></p>
+            <p>Pascal's Identity is a way to calculate binomial coefficients, which forms Pascal's Triangle, where each number is the sum of the two numbers directly above it.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>5. Exercises</h3>
+            <ul>
+                <li>What is the coefficient of x<sup>12</sup>y<sup>13</sup> in (x+y)<sup>25</sup>?</li>
+                <li>What is the coefficient of x<sup>12</sup>y<sup>13</sup> in (2x-3y)<sup>25</sup>?</li>
+                <li>What is the coefficient of x<sup>9</sup> in (2-x)<sup>19</sup>?</li>
+            </ul>
+        </div>
+
+        <a href="Tutorials/tutorial-5.html" class="magical-btn">⚡ Practice These Spells (Tutorial 5)</a>
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
             GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
         </p>
     </footer>
