@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 6: Mathematical Induction Master Bank</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 6: Mathematical Induction</h1>
+        <p>Master Practice Bank (20 Questions)</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Mathematical Induction: Full Master Bank</h2>
+        <p>This bank covers the full spectrum of Induction problems: Inequalities, Divisibility, Summations, and Recurrence. Solve these on parchment before revealing the magic!</p>
+
+        <h2 align="center">Part 01</h2>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Q1: Inequality Proof Structure</h3>
+                <p>For <em>P(n)</em>: <strong>2<sup>n</sup> < (n + 1)!</strong><br>
+                a. Write <em>P(2)</em>. Is it true?<br>b. Write <em>P(k)</em> and <em>P(k+1)</em>.<br>c. Explain the inductive step.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p>a) P(2): 4 < 6 (True). <br>b) P(k): 2<sup>k</sup> < (k+1)!; P(k+1): 2<sup>k+1</sup> < (k+2)!. <br>c) Assume P(k) is true, then show P(k+1) follows.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q2: Factorial Inequality</h3>
+                <p>Prove by induction that <strong>n! > 2<sup>n</sup></strong> for <em>n ≥ 4</em>.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 4! = 24 > 16. <br> <strong>Step:</strong> (k+1)! = (k+1)k! > (k+1)2<sup>k</sup>. Since k ≥ 4, (k+1) > 2, so (k+1)2<sup>k</sup> > 2<sup>k+1</sup>.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q3: Exponential Inequality</h3>
+                <p>Prove by induction: <strong>3<sup>n</sup> > n<sup>2</sup></strong> for <em>n ≥ 1</em>.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 3 > 1. <br><strong>Step:</strong> Assume 3<sup>k</sup> > k<sup>2</sup>. Then 3<sup>k+1</sup> = 3(3<sup>k</sup>) > 3k<sup>2</sup>. Since 3k<sup>2</sup> > (k+1)<sup>2</sup> for k≥1, the proof holds.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q4: Advanced Exponential Inequality</h3>
+                <p>Prove by induction: <strong>3<sup>n</sup> > n<sup>3</sup></strong> for <em>n ≥ 4</em>.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 81 > 64. <br> <strong>Step:</strong> 3<sup>k+1</sup> = 3(3<sup>k</sup>) > 3k<sup>3</sup>. We need 3k<sup>3</sup> > (k+1)<sup>3</sup> = k<sup>3</sup>+3k<sup>2</sup>+3k+1. This holds for k≥4.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q5: Divisibility by 3</h3>
+                <p>Prove <strong>2<sup>2n</sup> - 1</strong> is divisible by 3 for <em>n ≥ 0</em>.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 2<sup>0</sup> - 1 = 0. <br><strong>Step:</strong> 2<sup>2(k+1)</sup> - 1 = 4(2<sup>2k</sup>) - 1. Substitute 2<sup>2k</sup> = 3m+1. Result: 4(3m+1)-1 = 12m+3, which is 3(4m+1).</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q6: Divisibility by 7</h3>
+                <p>Prove <strong>11<sup>n</sup> - 4<sup>n</sup></strong> is divisible by 7.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 11-4=7. <br> <strong>Step:</strong> 11<sup>k+1</sup>-4<sup>k+1</sup> = 11(11<sup>k</sup>)-4(4<sup>k</sup>). Replace 11<sup>k</sup> with 4<sup>k</sup>+7m. Gives 11(4<sup>k</sup>+7m)-4(4<sup>k</sup>) = 7(4<sup>k</sup>)+77m, divisible by 7.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q7: Advanced Divisibility</h3>
+                <p>Prove <strong>9<sup>n</sup> - 8n - 1</strong> is divisible by <strong>64</strong>.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 9-8-1=0. <br> <strong>Step:</strong> 9<sup>k+1</sup> - 8(k+1) - 1. Replace 9<sup>k</sup> = 64m+8k+1. Result: 9(64m+8k+1)-8k-9 = 576m+72k+9-8k-9 = 64(9m+k).</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q8: Divisibility by 6</h3>
+                <p>Prove <strong>n<sup>3</sup> + 5n</strong> is divisible by 6.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 1+5=6. <br> <strong>Step:</strong> (k+1)<sup>3</sup>+5(k+1) = (k<sup>3</sup>+3k<sup>2</sup>+3k+1)+5k+5. Regroup: (k<sup>3</sup>+5k) + 3k(k+1) + 6. Since 3k(k+1) is div by 6, the whole thing is.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q9: Polynomial Factorization Divisibility</h3>
+                <p>Prove <strong>n<sup>3</sup> + 3n<sup>2</sup> + 2n</strong> is divisible by 6.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 1+3+2=6. <br> <strong>Step:</strong> (k+1)<sup>3</sup> + 3(k+1)<sup>2</sup> + 2(k+1) = (k<sup>3</sup>+3k<sup>2</sup>+2k) + 3k<sup>2</sup>+9k+6. 3k<sup>2</sup>+9k is 3k(k+3). Matches divisible by 6 logic.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q10: Divisibility by 4</h3>
+                <p>Prove <strong>5<sup>n</sup> - 1</strong> is divisible by 4.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 5-1=4. <br><strong>Step:</strong> 5(5<sup>k</sup>)-1 = 5(4m+1)-1 = 20m+4 = 4(5m+1).</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q11: Divisibility by 2</h3>
+                <p>Prove <strong>3<sup>n</sup> - 1</strong> is divisible by 2.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 3-1=2. <br> <strong>Step:</strong> 3(3<sup>k</sup>)-1 = 3(2m+1)-1 = 6m+2 = 2(3m+1).</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q12: Geometric Series</h3>
+                <p>Prove: <strong>&sum;<sub>i=0</sub><sup>n</sup> 2<sup>i</sup> = 2<sup>n+1</sup> - 1</strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 2<sup>0</sup> = 1; 2<sup>1</sup>-1 = 1. <br> <strong>Step:</strong> (2<sup>k+1</sup>-1) + 2<sup>k+1</sup> = 2(2<sup>k+1</sup>)-1 = 2<sup>k+2</sup>-1.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q13: General Geometric Series</h3>
+                <p>Prove: <strong>&sum;<sub>i=0</sub><sup>n</sup> ar<sup>i</sup> = a(r<sup>n+1</sup> - 1) / (r - 1)</strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> a=a. <br><strong>Step:</strong> Add ar<sup>k+1</sup>. Factor a/(r-1) and simplify fractions.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q14: Sum of Squares</h3>
+                <p>Prove: <strong>&sum;<sub>i=1</sub><sup>n</sup> i<sup>2</sup> = n(n+1)(2n+1) / 6</strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 1 = 1(2)(3)/6 = 1. <br> <strong>Step:</strong> Add (k+1)<sup>2</sup> to k(k+1)(2k+1)/6. Factor (k+1)/6 to reach correct formula.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q15: Sum of Cubes</h3>
+                <p>Prove: <strong>&sum;<sub>i=1</sub><sup>n</sup> i<sup>3</sup> = [n(n+1) / 2]<sup>2</sup></strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Step:</strong> [k(k+1)/2]<sup>2</sup> + (k+1)<sup>3</sup>. Factor (k+1)<sup>2</sup>/4. Result is [(k+1)(k+2)/2]<sup>2</sup>.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q16: Telescoping Sum</h3>
+                <p>Prove: <strong>&sum;<sub>i=1</sub><sup>n</sup> [1 / (i(i+1))] = n / (n+1)</strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Step:</strong> [k / (k+1)] + [1 / ((k+1)(k+2))]. Simplify to (k+1)/(k+2).</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q17: Recurrence Proof</h3>
+                <p>Given <em>a<sub>n</sub> = 2a<sub>n-1</sub> + 3</em> with <em>a<sub>1</sub> = 5</em>, prove <strong>a<sub>n</sub> = 2<sup>n+2</sup> - 3</strong>.</p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 2<sup>3</sup>-3 = 5. <br><strong>Step:</strong> a<sub>k+1</sub> = 2(2<sup>k+2</sup>-3)+3 = 2<sup>k+3</sup>-6+3 = 2<sup>(k+1)+2</sup>-3.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q18: Basic Sequence Proof</h3>
+                <p>Prove <strong>&sum;<sub>i=1</sub><sup>n</sup> i = n(n+1)/2</strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 1 = 1(2)/2. <br> <strong>Step:</strong> k(k+1)/2 + (k+1) = (k+1)(k+2)/2.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q19: Odd Integer Sum</h3>
+                <p>Prove <strong>1+3+5+...+(2n-1) = n<sup>2</sup></strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Basis:</strong> 1 = 1<sup>2</sup>. <br> <strong>Step:</strong> k<sup>2</sup> + (2k+1) = (k+1)<sup>2</sup>.</p></details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Q20: Recursive Product Proof</h3>
+                <p>Prove <strong>&sum;<sub>i=1</sub><sup>n</sup> i*i! = (n+1)! - 1</strong></p>
+                <details><summary>🪄 Reveal Answer</summary>
+                <p><strong>Step:</strong> Assume &sum; = (k+1)! - 1. Add (k+1)(k+1)!. (k+1)! - 1 + (k+1)(k+1)! = (k+1)!(1 + k+1) - 1 = (k+1)!(k+2) - 1 = (k+2)! - 1.</p></details>
+            </div>
+
+            <h2 align="center">Part 02</h2>
+
+            <div class="quiz-question">
+                <h3>Question 1: Inequality Proof Structure</h3>
+                <p>For each positive integer <em>n</em>, let <em>P(n)</em> be the property <strong>2<sup>n</sup> < (n + 1)!</strong></p>
+                <ol type="a">
+                    <li>Write <em>P(2)</em>. Is <em>P(2)</em> true?</li>
+                    <li>Write <em>P(k)</em>.</li>
+                    <li>Write <em>P(k+1)</em>.</li>
+                    <li>In a proof by mathematical induction that this inequality holds for all integers <em>n ≥ 2</em>, what must be shown in the inductive step?</li>
+                </ol>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answers:</strong><br>
+                    a) P(2): 2<sup>2</sup> < (2+1)! &rarr; 4 < 3! &rarr; 4 < 6. This is True.<br>
+                    b) P(k): 2<sup>k</sup> < (k+1)!<br>
+                    c) P(k+1): 2<sup>k+1</sup> < (k+2)!<br>
+                    d) We must show that assuming P(k) is true (the inductive hypothesis), P(k+1) must follow.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Proving Divisibility</h3>
+                <p>Use mathematical induction to prove that for all integers <em>n ≥ 0</em>, <strong>2<sup>2n</sup> - 1</strong> is divisible by 3.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> Show P(0) is true: 2<sup>0</sup> - 1 = 1 - 1 = 0, which is divisible by 3.<br>
+                    <strong>Inductive Step:</strong> Assume 2<sup>2k</sup> - 1 = 3m for some integer m. Show 2<sup>2(k+1)</sup> - 1 is also divisible by 3.<br>
+                    <em>Hint: 2<sup>2k+2</sup> - 1 = 4(2<sup>2k</sup>) - 1 = 4(2<sup>2k</sup> - 1 + 1) - 1 = 4(2<sup>2k</sup> - 1) + 3, which is clearly divisible by 3.</em></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Proving Summation Formulas</h3>
+                <p>Use mathematical induction to prove that <strong>&sum;<sub>j=0</sub><sup>n</sup> ar<sup>j</sup> = (ar<sup>n+1</sup> - a) / (r - 1)</strong> where <em>r ≠ 1</em> and <em>n</em> is a nonnegative integer.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(0) &rarr; ar<sup>0</sup> = a(r<sup>1</sup> - a) / (r - 1) &rarr; a = a(r - 1)/(r - 1) &rarr; a = a. (True).<br>
+                    <strong>Inductive Step:</strong> Assume &sum;<sub>j=0</sub><sup>k</sup> ar<sup>j</sup> = (ar<sup>k+1</sup> - a) / (r - 1). Show it for <em>k+1</em>.<br>
+                    Add the <em>k+1</em> term: (ar<sup>k+1</sup> - a)/(r - 1) + ar<sup>k+1</sup>. Simplify to match the formula for <em>n=k+1</em>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Sum of Squares</h3>
+                <p>Use induction to prove the formula for the sum of the first <em>n</em> squares: <strong>&sum;<sub>i=1</sub><sup>n</sup> i<sup>2</sup> = n(n+1)(2n+1) / 6</strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 1<sup>2</sup> = 1(1+1)(2(1)+1) / 6 = 6/6 = 1. (True).<br>
+                    <strong>Inductive Step:</strong> Assume true for P(k). Add the (k+1)<sup>2</sup> term to the sum: [k(k+1)(2k+1)/6] + (k+1)<sup>2</sup>.<br>
+                    Factor out (k+1)/6 to get: [(k+1)/6] * [k(2k+1) + 6(k+1)] = [(k+1)/6] * [2k<sup>2</sup> + 7k + 6] = [(k+1)(k+2)(2k+3)/6].</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: Power of 7 Divisibility</h3>
+                <p>Use mathematical induction to prove that <strong>7<sup>n</sup> - 1</strong> is divisible by 6 for all <em>n ≥ 1</em>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 7<sup>1</sup> - 1 = 6, which is divisible by 6. (True).<br>
+                    <strong>Inductive Step:</strong> Assume 7<sup>k</sup> - 1 = 6m (where m is an integer). <br>
+                    Show 7<sup>k+1</sup> - 1 is divisible by 6: 7(7<sup>k</sup>) - 1 = 7(6m + 1) - 1 = 42m + 7 - 1 = 42m + 6 = 6(7m + 1).<br>
+                    Since the result is a multiple of 6, it is divisible by 6.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Geometric Series</h3>
+                <p>Use induction to prove: <strong>&sum;<sub>i=1</sub><sup>n</sup> 2<sup>i-1</sup> = 2<sup>n</sup> - 1</strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 2<sup>0</sup> = 2<sup>1</sup> - 1 &rarr; 1 = 1. (True).<br>
+                    <strong>Inductive Step:</strong> Assume &sum;<sub>i=1</sub><sup>k</sup> 2<sup>i-1</sup> = 2<sup>k</sup> - 1.<br>
+                    For P(k+1), add the next term 2<sup>k</sup>: (2<sup>k</sup> - 1) + 2<sup>k</sup> = 2(2<sup>k</sup>) - 1 = 2<sup>k+1</sup> - 1.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: Factorial Inequality</h3>
+                <p>Prove by induction that <strong>n! > 2<sup>n</sup></strong> for all integers <em>n ≥ 4</em>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(4) &rarr; 4! = 24 and 2<sup>4</sup> = 16. 24 > 16. (True).<br>
+                    <strong>Inductive Step:</strong> Assume k! > 2<sup>k</sup>. <br>
+                    For P(k+1): (k+1)! = (k+1) * k! > (k+1) * 2<sup>k</sup>.<br>
+                    Since k ≥ 4, (k+1) is at least 5. Therefore, 5 * 2<sup>k</sup> > 2 * 2<sup>k</sup> = 2<sup>k+1</sup>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Power of 3 Divisibility</h3>
+                <p>Prove by induction that <strong>3<sup>n</sup> - 1</strong> is divisible by 2 for all <em>n ≥ 1</em>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 3<sup>1</sup> - 1 = 2, which is divisible by 2. (True).<br>
+                    <strong>Inductive Step:</strong> Assume 3<sup>k</sup> - 1 = 2m. <br>
+                    For P(k+1): 3<sup>k+1</sup> - 1 = 3(3<sup>k</sup>) - 1. Substitute 3<sup>k</sup> = 2m + 1:<br>
+                    3(2m + 1) - 1 = 6m + 3 - 1 = 6m + 2 = 2(3m + 1), which is divisible by 2.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: Sum of Cubes</h3>
+                <p>Use induction to prove the formula for the sum of cubes: <strong>&sum;<sub>i=1</sub><sup>n</sup> i<sup>3</sup> = [n(n+1) / 2]<sup>2</sup></strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 1<sup>3</sup> = [1(2)/2]<sup>2</sup> = 1. (True).<br>
+                    <strong>Inductive Step:</strong> Assume true for P(k). Add (k+1)<sup>3</sup> to the sum: [k(k+1)/2]<sup>2</sup> + (k+1)<sup>3</sup>.<br>
+                    Factor out (k+1)<sup>2</sup>: [(k+1)<sup>2</sup> / 4] * [k<sup>2</sup> + 4(k+1)] = [(k+1)<sup>2</sup> / 4] * [k<sup>2</sup> + 4k + 4] = [(k+1)<sup>2</sup>(k+2)<sup>2</sup> / 4]. This matches the formula for n=k+1.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: Divisibility by 4</h3>
+                <p>Use mathematical induction to prove that <strong>5<sup>n</sup> - 1</strong> is divisible by 4 for all <em>n ≥ 1</em>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 5<sup>1</sup> - 1 = 4, which is divisible by 4. (True).<br>
+                    <strong>Inductive Step:</strong> Assume 5<sup>k</sup> - 1 = 4m. <br>
+                    For P(k+1): 5<sup>k+1</sup> - 1 = 5(5<sup>k</sup>) - 1. Substitute 5<sup>k</sup> = 4m + 1:<br>
+                    5(4m + 1) - 1 = 20m + 5 - 1 = 20m + 4 = 4(5m + 1), which is divisible by 4.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Inequality Proof</h3>
+                <p>Prove by induction that <strong>3<sup>n</sup> > n<sup>2</sup></strong> for all integers <em>n ≥ 1</em>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 3<sup>1</sup> > 1<sup>2</sup> &rarr; 3 > 1. (True).<br>
+                    <strong>Inductive Step:</strong> Assume 3<sup>k</sup> > k<sup>2</sup>.<br>
+                    For P(k+1): 3<sup>k+1</sup> = 3 * 3<sup>k</sup> > 3k<sup>2</sup>.<br>
+                    We need to show 3k<sup>2</sup> > (k+1)<sup>2</sup> = k<sup>2</sup> + 2k + 1.<br>
+                    This simplifies to 2k<sup>2</sup> - 2k - 1 > 0, which holds true for all k ≥ 2. (The base cases n=1 and n=2 can be checked individually to satisfy the range).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Divisibility by 7</h3>
+                <p>Use induction to prove that <strong>11<sup>n</sup> - 4<sup>n</sup></strong> is divisible by 7 for all <em>n ≥ 1</em>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 11 - 4 = 7, which is divisible by 7. (True).<br>
+                    <strong>Inductive Step:</strong> Assume 11<sup>k</sup> - 4<sup>k</sup> = 7m &rarr; 11<sup>k</sup> = 4<sup>k</sup> + 7m.<br>
+                    For P(k+1): 11<sup>k+1</sup> - 4<sup>k+1</sup> = 11(11<sup>k</sup>) - 4(4<sup>k</sup>).<br>
+                    Substitute: 11(4<sup>k</sup> + 7m) - 4(4<sup>k</sup>) = 11(4<sup>k</sup>) + 77m - 4(4<sup>k</sup>) = 7(4<sup>k</sup>) + 77m = 7(4<sup>k</sup> + 11m). This is divisible by 7.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Closed Form Verification</h3>
+                <p>Given the recurrence relation <em>a<sub>n</sub> = 2a<sub>n-1</sub> + 1</em> with <em>a<sub>1</sub> = 1</em>, use induction to prove the closed form is <strong>a<sub>n</sub> = 2<sup>n</sup> - 1</strong>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; a<sub>1</sub> = 2<sup>1</sup> - 1 = 1. (True).<br>
+                    <strong>Inductive Step:</strong> Assume a<sub>k</sub> = 2<sup>k</sup> - 1.<br>
+                    For P(k+1): a<sub>k+1</sub> = 2(a<sub>k</sub>) + 1 = 2(2<sup>k</sup> - 1) + 1 = 2<sup>k+1</sup> - 2 + 1 = 2<sup>k+1</sup> - 1. (True).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Divisibility by 6</h3>
+                <p>Use induction to prove that <strong>n<sup>3</sup> + 5n</strong> is divisible by 6 for all <em>n ≥ 1</em>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(1) &rarr; 1<sup>3</sup> + 5(1) = 6, divisible by 6. (True).<br>
+                    <strong>Inductive Step:</strong> Assume k<sup>3</sup> + 5k = 6m.<br>
+                    For P(k+1): (k+1)<sup>3</sup> + 5(k+1) = (k<sup>3</sup> + 3k<sup>2</sup> + 3k + 1) + 5k + 5.<br>
+                    Rearrange: (k<sup>3</sup> + 5k) + 3k<sup>2</sup> + 3k + 6 = (6m) + 3k(k+1) + 6.<br>
+                    Since k(k+1) is always even (product of two consecutive integers), 3k(k+1) is divisible by 6. The sum is divisible by 6.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: Sum of Powers of 2</h3>
+                <p>Prove by induction that <strong>&sum;<sub>i=0</sub><sup>n</sup> 2<sup>i</sup> = 2<sup>n+1</sup> - 1</strong></p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer Structure:</strong><br>
+                    <strong>Basis Step:</strong> P(0) &rarr; 2<sup>0</sup> = 1 and 2<sup>0+1</sup> - 1 = 1. (True).<br>
+                    <strong>Inductive Step:</strong> Assume &sum;<sub>i=0</sub><sup>k</sup> 2<sup>i</sup> = 2<sup>k+1</sup> - 1.<br>
+                    For P(k+1): Add the next term 2<sup>k+1</sup> to the sum: (2<sup>k+1</sup> - 1) + 2<sup>k+1</sup> = 2 * (2<sup>k+1</sup>) - 1 = 2<sup>k+2</sup> - 1. (True).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+              <h3>Question 16: Telescoping Sum</h3>
+              <p>Use induction to prove: <strong>&sum;<sub>i=1</sub><sup>n</sup> [1 / (i(i+1))] = n / (n+1)</strong></p>
+              <details>
+                  <summary>🪄 Lumos! Reveal Answer</summary>
+                  <p><strong>Step-by-Step Solution:</strong><br>
+                  <strong>Basis Step:</strong> For n=1: 1/(1*2) = 1/2. Formula: 1/(1+1) = 1/2. Matches.<br>
+                  <strong>Inductive Step:</strong> Assume &sum;<sub>i=1</sub><sup>k</sup> [1 / (i(i+1))] = k / (k+1).<br>
+                  For P(k+1), add the next term 1/((k+1)(k+2)):<br>
+                  [k / (k+1)] + [1 / ((k+1)(k+2))]<br>
+                  Factor out 1/(k+1): [1/(k+1)] * [k + 1/(k+2)]<br>
+                  = [1/(k+1)] * [(k(k+2) + 1) / (k+2)]<br>
+                  = [1/(k+1)] * [(k<sup>2</sup> + 2k + 1) / (k+2)]<br>
+                  = [1/(k+1)] * [(k+1)<sup>2</sup> / (k+2)] = (k+1) / (k+2). Matches.</p>
+              </details>
+          </div>
+
+          <div class="quiz-question">
+              <h3>Question 17: Polynomial Factorization</h3>
+              <p>Prove by induction that <strong>n<sup>3</sup> + 3n<sup>2</sup> + 2n</strong> is divisible by <strong>6</strong> for all <em>n ≥ 1</em>.</p>
+              <details>
+                  <summary>🪄 Lumos! Reveal Answer</summary>
+                  <p><strong>Step-by-Step Solution:</strong><br>
+                  <strong>Basis Step:</strong> n=1: 1 + 3 + 2 = 6. Divisible by 6. (True).<br>
+                  <strong>Inductive Step:</strong> Assume k<sup>3</sup> + 3k<sup>2</sup> + 2k = 6m.<br>
+                  For P(k+1): (k+1)<sup>3</sup> + 3(k+1)<sup>2</sup> + 2(k+1)<br>
+                  Expand: (k<sup>3</sup> + 3k<sup>2</sup> + 3k + 1) + 3(k<sup>2</sup> + 2k + 1) + 2k + 2<br>
+                  Group the k-terms: (k<sup>3</sup> + 3k<sup>2</sup> + 2k) + 3k<sup>2</sup> + 3k + 3 + 3k + 3<br>
+                  = (6m) + 3k<sup>2</sup> + 9k + 6<br>
+                  Note that 3k<sup>2</sup> + 3k = 3k(k+1). Since k(k+1) is always even, 3k(k+1) is divisible by 6.<br>
+                  Therefore, 6m + 6 + (multiple of 6) is divisible by 6.</p>
+              </details>
+          </div>
+
+          <div class="quiz-question">
+              <h3>Question 18: Recurrence Relation Proof</h3>
+              <p>A sequence is defined as <em>a<sub>n</sub> = 2a<sub>n-1</sub> + 3</em> with <em>a<sub>1</sub> = 5</em>. Prove by induction that the closed form is <strong>a<sub>n</sub> = 2<sup>n+2</sup> - 3</strong>.</p>
+              <details>
+                  <summary>🪄 Lumos! Reveal Answer</summary>
+                  <p><strong>Step-by-Step Solution:</strong><br>
+                  <strong>Basis Step:</strong> n=1: 2<sup>1+2</sup> - 3 = 2<sup>3</sup> - 3 = 8 - 3 = 5. Matches a<sub>1</sub>.<br>
+                  <strong>Inductive Step:</strong> Assume a<sub>k</sub> = 2<sup>k+2</sup> - 3.<br>
+                  For P(k+1): a<sub>k+1</sub> = 2(a<sub>k</sub>) + 3<br>
+                  = 2(2<sup>k+2</sup> - 3) + 3<br>
+                  = 2<sup>k+3</sup> - 6 + 3<br>
+                  = 2<sup>(k+1)+2</sup> - 3. Matches.</p>
+              </details>
+          </div>
+
+          <div class="quiz-question">
+              <h3>Question 19: Inequality with Exponential</h3>
+              <p>Use induction to prove that <strong>3<sup>n</sup> > n<sup>3</sup></strong> for all integers <strong>n ≥ 4</strong>.</p>
+              <details>
+                  <summary>🪄 Lumos! Reveal Answer</summary>
+                  <p><strong>Step-by-Step Solution:</strong><br>
+                  <strong>Basis Step:</strong> n=4: 3<sup>4</sup> = 81 and 4<sup>3</sup> = 64. 81 > 64. (True).<br>
+                  <strong>Inductive Step:</strong> Assume 3<sup>k</sup> > k<sup>3</sup>.<br>
+                  For P(k+1): 3<sup>k+1</sup> = 3 * 3<sup>k</sup> > 3k<sup>3</sup>.<br>
+                  We need 3k<sup>3</sup> > (k+1)<sup>3</sup> = k<sup>3</sup> + 3k<sup>2</sup> + 3k + 1.<br>
+                  This requires 2k<sup>3</sup> - 3k<sup>2</sup> - 3k - 1 > 0. For k=4, 2(64) - 3(16) - 12 - 1 = 128 - 48 - 13 = 67 > 0. The function grows for k > 4.</p>
+              </details>
+          </div>
+
+        </div>
+        
+        <a href="../lesson6.html" class="magical-btn" style="background: #2e0b0b; border-color:#d3a625;">🔙 Return to Lecture 6</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>

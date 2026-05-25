@@ -9,12 +9,12 @@
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
         <h1>Lecture 6: Mathematical Induction</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -32,20 +32,102 @@
         <h2>Lecture 6: Mathematical Induction</h2>
 
         <div class="concept-box">
-            <h3>1. Principle of Mathematical Induction</h3>
-            <p>A technique to prove a propositional function P(n) is true for all positive integers n. It operates like an infinite ladder.</p>
+            <h3>1. Introduction: The Ladder Analogy</h3>
+            <p>Mathematical induction is a technique used to prove that a propositional function P(n) is true for all positive integers n. Imagine an infinite ladder:</p>
             <ul>
-                <li><strong>Basis Step:</strong> Verify that P(1) is true.</li>
-                <li><strong>Inductive Step:</strong> Assume P(k) is true (Inductive Hypothesis), and prove that P(k+1) must also be true.</li>
+                <li><strong>Step 1:</strong> We can reach the first rung of the ladder.</li>
+                <li><strong>Step 2:</strong> If we can reach a particular rung (k), then we can reach the next rung (k + 1).</li>
+            </ul>
+            <p>From (1), we reach rung 1. By applying (2), we reach rung 2. Applying (2) again reaches rung 3. We can apply this rule any number of times to reach any rung, no matter how high up.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>2. Principle of Mathematical Induction</h3>
+            <p>To prove that P(n) is true for all positive integers n, we complete these two steps:</p>
+            <ul>
+                <li><strong>Basis Step:</strong> Show that P(1) is true.</li>
+                <li><strong>Inductive Step:</strong> Show that P(k) → P(k+1) is true for all positive integers k.</li>
+            </ul>
+            <p>To complete the inductive step, assume the <em>Inductive Hypothesis</em> that P(k) holds for an arbitrary integer k, then show that P(k+1) must be true.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. The Domino Analogy</h3>
+            <p>Think of an infinite sequence of standing dominoes:</p>
+            <ul>
+                <li>We know the first domino is knocked down (Basis Step: P(1) is true).</li>
+                <li>If the k<sup>th</sup> domino is knocked over, it knocks over the (k+1)<sup>th</sup> domino (Inductive Step: P(k) → P(k+1) is true).</li>
+            </ul>
+            <p>Hence, all dominoes are eventually knocked over.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>4. Proving a Summation Formula</h3>
+            <p><strong>Example:</strong> Show that &sum;<sub>i=1</sub><sup>n</sup> i = n(n+1)/2</p>
+            <ul>
+                <li><strong>Basis Step:</strong> P(1) is true since 1(1+1)/2 = 1.</li>
+                <li><strong>Inductive Step:</strong> Assume true for P(k). The hypothesis is &sum;<sub>i=1</sub><sup>k</sup> i = k(k+1)/2.</li>
+                <li>Under this assumption, show P(k+1):<br>
+                1 + 2 + ... + k + (k+1) = [k(k+1)/2] + (k+1)<br>
+                = [k(k+1) + 2(k+1)] / 2<br>
+                = (k+1)(k+2) / 2</li>
             </ul>
         </div>
+
+        <div class="concept-box">
+            <h3>5. Conjecturing and Proving</h3>
+            <p><strong>Example:</strong> Find a formula for the sum of the first n positive odd integers.</p>
+            <p><strong>Observation:</strong> 1=1, 1+3=4, 1+3+5=9, 1+3+5+7=16. Conjecture: sum = n<sup>2</sup>.</p>
+            <ul>
+                <li><strong>Basis Step:</strong> P(1) is true as 1<sup>2</sup> = 1.</li>
+                <li><strong>Inductive Step:</strong> Assume 1+3+5+...+(2k-1) = k<sup>2</sup>.</li>
+                <li>Then, 1+3+5+...+(2k-1) + (2k+1) = k<sup>2</sup> + (2k+1) = (k+1)<sup>2</sup>.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>6. Proving Inequalities</h3>
+            <p><strong>Case 1: n < 2<sup>n</sup></strong></p>
+            <ul>
+                <li>Basis Step: 1 < 2<sup>1</sup> (True).</li>
+                <li>Inductive Step: Assume k < 2<sup>k</sup>. Then k+1 < 2<sup>k</sup> + 1 ≤ 2<sup>k</sup> + 2<sup>k</sup> = 2<sup>k+1</sup>.</li>
+            </ul>
+            <p><strong>Case 2: 2<sup>n</sup> < n! for n ≥ 4</strong></p>
+            <ul>
+                <li>Basis Step: P(4) is true since 16 < 24.</li>
+                <li>Inductive Step: Assume 2<sup>k</sup> < k!. Then 2<sup>k+1</sup> = 2 × 2<sup>k</sup> < 2 × k! < (k+1) × k! = (k+1)!.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>7. Proving Divisibility</h3>
+            <p><strong>Example:</strong> Prove n<sup>3</sup> - n is divisible by 3.</p>
+            <ul>
+                <li><strong>Basis Step:</strong> 1<sup>3</sup> - 1 = 0, which is divisible by 3.</li>
+                <li><strong>Inductive Step:</strong> Assume k<sup>3</sup> - k is divisible by 3.</li>
+                <li>For (k+1): (k+1)<sup>3</sup> - (k+1) = (k<sup>3</sup> + 3k<sup>2</sup> + 3k + 1) - (k+1) = (k<sup>3</sup> - k) + 3(k<sup>2</sup> + k).</li>
+                <li>Since (k<sup>3</sup> - k) is divisible by 3 (hypothesis) and 3(k<sup>2</sup>+k) is divisible by 3, the sum is divisible by 3.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>8. Tiling Checkerboards</h3>
+            <p><strong>Problem:</strong> Show that every 2<sup>n</sup> × 2<sup>n</sup> checkerboard with one square removed can be tiled using right triominoes (L-shaped tiles covering 3 squares).</p>
+            <ul>
+                <li><strong>Basis Step:</strong> P(1) is true.</li>
+                <li><strong>Inductive Step:</strong> Split the board into four quadrants. Remove one square from one quadrant. The other three quadrants can be "corrected" by placing one triomino at the center, leaving three squares each missing a corner. By the inductive hypothesis, these can all be tiled.</li>
+            </ul>
+        </div>
+
+        <a href="Tutorials/tutorial-6.html" class="magical-btn">⚡ Practice These Spells (Tutorial 6)</a>
+
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
             GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
         </p>
     </footer>
