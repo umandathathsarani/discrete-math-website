@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 2: Functions Practice</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 2: Functions</h1>
+        <p>Test Your Knowledge Before the O.W.L. Exams</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Functions: Master Practice Bank</h2>
+        <p>Attempt to solve each problem on a piece of parchment before revealing the magical answer below it. A true wizard tests their limits!</p>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Question 1: The Core Definition</h3>
+                <p>What is the fundamental rule that makes a relation a valid <strong>Function</strong>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Every element in the Domain (input) must map to <strong>exactly one unique element</strong> in the Codomain (output). An input cannot shoot out two arrows!</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Domain vs. Range</h3>
+                <p>In a function <em>f: X &rarr; Y</em>, what is the difference between the <strong>Codomain</strong> and the <strong>Range</strong>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The <strong>Codomain</strong> is the entire set Y (all *possible* outputs). The <strong>Range</strong> is the specific subset of Y containing only the elements that actually *get mapped to* by elements in X.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Calculating Range</h3>
+                <p>Let the Domain be X = {-2, -1, 0, 1, 2}. If the function is <strong>f(x) = x²</strong>, what is the Range?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Range = {0, 1, 4}. <br>
+                    <em>(-2² = 4, -1² = 1, 0² = 0, 1² = 1, 2² = 4). Notice how duplicates are only listed once in a set!</em></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Equality of Functions</h3>
+                <p>Let f(x) = x + 2 and g(x) = (x² - 4) / (x - 2). Both map Real numbers to Real numbers. Are f and g equal functions?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>No.</strong> Even though (x² - 4) / (x - 2) simplifies to x + 2, the function g(x) is undefined at x = 2 (because dividing by zero is impossible). Since their valid domains are not perfectly identical, the functions are not equal.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: Identifying Injective</h3>
+                <p>Is the function <strong>f(x) = 3x + 1</strong> (from Real numbers to Real numbers) One-to-One (Injective)? Why?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Yes.</strong> Every unique x value produces a completely unique y value. If f(a) = f(b), then 3a + 1 = 3b + 1, which means a = b.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Injective Failure</h3>
+                <p>Give a mathematical example of a function that is <strong>NOT</strong> One-to-One (Injective) on the set of all Real numbers.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>f(x) = x²</strong> or <strong>f(x) = |x|</strong> (Absolute value).<br>
+                    In both cases, two different inputs (like 2 and -2) map to the exact same output (4 or 2), breaking the One-to-One rule.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: Identifying Surjective</h3>
+                <p>Let <strong>f(x) = x²</strong> from the set of Real numbers to the set of Real numbers. Is this function Onto (Surjective)?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>No.</strong> For a function to be Onto, the Range must equal the Codomain. The Codomain is all Real numbers, but the Range of x² is only <em>positive</em> numbers and zero. Negative numbers are never hit.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Fixing Surjectivity</h3>
+                <p>How could you change the Codomain of <strong>f(x) = x²</strong> to make it a Surjective (Onto) function?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Change the Codomain to be the set of <strong>all non-negative Real numbers</strong> ([0, ∞)). If the Codomain perfectly matches the Range, the function becomes Surjective!</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: The Perfect Match</h3>
+                <p>What two conditions must a function meet to be called <strong>Bijective</strong>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It must be BOTH <strong>One-to-One (Injective)</strong> AND <strong>Onto (Surjective)</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: Inverse Pre-requisites</h3>
+                <p>True or False: Any mathematical function can be reversed to create an Inverse Function (f⁻¹).</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>False.</strong> A function can ONLY have an inverse if it is <strong>Bijective</strong> (One-to-One and Onto). If it is not Bijective, reversing it will break the fundamental rules of a function.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Calculating the Inverse I</h3>
+                <p>Find the inverse function of <strong>f(x) = 5x - 7</strong>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. y = 5x - 7<br>
+                    2. y + 7 = 5x<br>
+                    3. x = (y + 7) / 5<br>
+                    4. Swap x and y: <strong>f⁻¹(x) = (x + 7) / 5</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Calculating the Inverse II</h3>
+                <p>Find the inverse function of <strong>g(x) = (x / 3) + 2</strong>.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. y = (x / 3) + 2<br>
+                    2. y - 2 = x / 3<br>
+                    3. 3(y - 2) = x<br>
+                    4. Swap x and y: <strong>g⁻¹(x) = 3(x - 2)</strong> or <strong>3x - 6</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Many-to-One</h3>
+                <p>If a function maps 3 different domain elements to the exact same codomain element, what type of function is it?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A <strong>Many-to-One</strong> function. (And because it is Many-to-One, it is automatically NOT One-to-One).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Restricting the Domain</h3>
+                <p>The function f(x) = x² does not have an inverse because it is Many-to-One. How can we "fix" the Domain so that the inverse f⁻¹(x) = √x is mathematically legal?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    We must restrict the Domain to only allow positive numbers and zero (<strong>x ≥ 0</strong>). By removing the negative numbers, we remove the duplicates, making it One-to-One!</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: Function Combinations</h3>
+                <p>Is it possible for a function to be Onto (Surjective) but NOT One-to-One (Injective)? If yes, describe how.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Yes.</strong> This happens if every single item in the output gets hit by an arrow (Onto), but at least one output gets hit by *two* arrows (Many-to-One). This often occurs if the Domain is larger than the Codomain.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 16: Cardinality and Injective</h3>
+                <p>If there is an Injective (One-to-One) function from set A to set B, what must be true about their sizes (cardinalities)?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Set A must be smaller than or equal to Set B. <strong>(|A| ≤ |B|)</strong>. <br>
+                    <em>(If A had more elements than B, they couldn't all have a unique partner without doubling up!)</em></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 17: Cardinality and Surjective</h3>
+                <p>If there is a Surjective (Onto) function from set A to set B, what must be true about their sizes?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Set A must be larger than or equal to Set B. <strong>(|A| ≥ |B|)</strong>.<br>
+                    <em>(You need at least enough arrows to hit every target in B).</em></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 18: Cardinality and Bijective</h3>
+                <p>Based on the previous two questions, if a function is Bijective, what is the relationship between the size of Domain A and Codomain B?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    They must be exactly equal! <strong>(|A| = |B|)</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 19: Inverse Property</h3>
+                <p>If you take an input <em>x</em>, pass it through the function <em>f</em>, and then pass that result through the inverse function <em>f⁻¹</em>, what is your final answer? (i.e., What is f⁻¹(f(x))?)</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The answer is just <strong>x</strong>. The inverse function exactly undoes whatever the original function did, bringing you right back to your starting point.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 20: Evaluating Mappings</h3>
+                <p>A mapping has 3 inputs (A, B, C) and 3 outputs (1, 2, 3). The arrows are: A &rarr; 2, B &rarr; 2, C &rarr; 3. <br>Is this a valid function? If yes, classify it (Injective, Surjective, etc.).</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Yes, it is a valid function (every input shoots one arrow). <br>
+                    It is <strong>Many-to-One</strong> (A and B both point to 2). <br>
+                    It is <strong>NOT Surjective</strong> (Output '1' never gets hit). <br>
+                    Therefore, it is also <strong>NOT Bijective</strong>.</p>
+                </details>
+            </div>
+
+        </div>
+        
+        <a href="../lesson2.html" class="magical-btn" style="background: #2e0b0b; border-color:#d3a625;">🔙 Return to Lecture 2</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>
