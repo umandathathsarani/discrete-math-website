@@ -128,16 +128,6 @@ h1, h2, h3 {
     font-size: 1.05rem;
 }
 
-@media (max-width: 600px) {
-    .profile-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .profile-pic {
-        margin-bottom: 15px;
-    }
-}
-
 footer {
     background-color: rgba(15, 15, 20, 0.95);
     color: #e0d0a6;
@@ -215,9 +205,9 @@ details p {
 }
 
 .ravenclaw-note {
-    background-color: #2e0b0b;
+    background-color: #2e0b0b; 
     color: #e0d0a6; 
-    border-left: 4px solid #d3a625;
+    border-left: 4px solid #d3a625; 
     padding: 10px 15px;
     margin-top: 12px;
     font-size: 0.95rem;
@@ -246,12 +236,12 @@ details p {
     margin-bottom: 15px;
     padding: 15px 20px;
     border-radius: 6px;
-    border-left: 3px solid #d3a625;
+    border-left: 3px solid #d3a625; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .law-text {
-    flex: 1;
+    flex: 1; 
     padding-right: 20px;
 }
 
@@ -264,6 +254,13 @@ details p {
 }
 
 @media (max-width: 600px) {
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+        margin-bottom: 15px;
+    }
     .laws-list li {
         flex-direction: column;
         text-align: center;
