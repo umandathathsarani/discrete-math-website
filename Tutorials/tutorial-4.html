@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 4: Counting & Permutations</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 4: Counting & Permutations</h1>
+        <p>Test Your Knowledge Before the O.W.L. Exams</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Counting & Permutations: Master Practice Bank</h2>
+        <p>Attempt to solve each problem on a piece of parchment before revealing the magical answer below it. A true wizard tests their limits!</p>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Question 1: The Goal of Counting</h3>
+                <p>What is the primary purpose of mathematical counting in discrete math?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    To determine the number of elements in a set or the number of ways to arrange/choose objects <strong>without</strong> having to manually list every single possibility.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Sum vs. Product Rule</h3>
+                <p>If you see the word "AND" (or sequential tasks) in a word problem, which counting rule should you generally apply? What if you see the word "OR"?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    "AND" / Sequential = <strong>Product Rule</strong> (Multiplication).<br>
+                    "OR" / Mutually Exclusive = <strong>Sum Rule</strong> (Addition).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Applying the Sum Rule</h3>
+                <p>A student can choose a project from 5 Web Development topics OR 4 Artificial Intelligence topics. How many total choices does the student have?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Because the student chooses ONE topic in total (mutually exclusive), we use the Sum Rule: 5 + 4 = <strong>9 possible choices</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Applying the Product Rule</h3>
+                <p>To access a magical vault, you must select 1 letter from the alphabet (26 options) followed by 1 digit (0-9, which is 10 options). How many different codes exist?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Because the tasks are sequential (Letter AND a Digit), we use the Product Rule: 26 &times; 10 = <strong>260 possible codes</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: Principle of Inclusion-Exclusion</h3>
+                <p>What is the mathematical formula for the Subtraction Rule (also known as the Principle of Inclusion-Exclusion)?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>|A &cup; B| = |A| + |B| - |A &cap; B|</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Applying the Subtraction Rule</h3>
+                <p>In a class of 50 students, 30 study Java, 20 study Python, and 5 study BOTH. How many students study either Java OR Python?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    |Java &cup; Python| = 30 + 20 - 5 = <strong>45 students</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: The Division Rule</h3>
+                <p>If you arrange objects in a circle, rotating the circle doesn't create a new arrangement. If there are <em>n</em> ways to arrange items linearly, but each distinct circle is counted <em>d</em> times, how do you find the unique circular arrangements?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Using the Division Rule: <strong>n / d</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Permutation Definition</h3>
+                <p>What is the most critical defining feature of a Permutation compared to other counting methods?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Order matters!</strong> The arrangement (A, B, C) is counted as completely different from (C, B, A).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: Permutation Without Repetition Formula</h3>
+                <p>State the formula for calculating permutations of <em>r</em> items chosen from <em>n</em> distinct items, without repetition.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>P(n, r) = n! / (n - r)!</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: Permutation Without Repetition Calculation</h3>
+                <p>A club has 10 members. In how many ways can they elect a President, Vice President, and Secretary? (No person can hold more than one office).</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Since roles are specific, order matters. n = 10, r = 3.<br>
+                    P(10, 3) = 10! / (10 - 3)! = 10! / 7!<br>
+                    = 10 &times; 9 &times; 8 = <strong>720 ways</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Total Ordering</h3>
+                <p>How many different ways can 5 distinct books be arranged on a shelf?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    This is a permutation of 5 items choosing all 5. P(5,5) = 5! / 0! = 5!<br>
+                    5! = 5 &times; 4 &times; 3 &times; 2 &times; 1 = <strong>120 ways</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Permutation With Repetition Formula</h3>
+                <p>If you are forming an arrangement of length <em>r</em> from <em>n</em> available items, and you are allowed to repeat items, what is the formula?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>n<sup>r</sup></strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Permutation With Repetition Calculation</h3>
+                <p>A digital lock requires a 4-digit PIN code using numbers 0-9. How many possible PINs can be created if numbers can be repeated?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Options (n) = 10, Slots (r) = 4.<br>
+                    10<sup>4</sup> = <strong>10,000 possible PINs</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Indistinguishable Objects Formula</h3>
+                <p>What is the formula to find the number of distinct permutations of <em>n</em> objects where some objects (n<sub>1</sub>, n<sub>2</sub>, etc.) are identical to each other?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>n! / (n<sub>1</sub>! &times; n<sub>2</sub>! &times; ... &times; n<sub>k</sub>!)</strong></p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: The "MISSISSIPPI" Problem</h3>
+                <p>How many distinct ways can the letters of the word <strong>"SUCCESS"</strong> be arranged?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Total letters (n) = 7. <br>
+                    Identical letters: S appears 3 times, C appears 2 times.<br>
+                    Ways = 7! / (3! &times; 2!) <br>
+                    = 5040 / (6 &times; 2) = 5040 / 12 = <strong>420 distinct ways</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 16: Tricky Indistinguishable Calculation</h3>
+                <p>A wizard has 8 potion bottles in a row: 4 are exactly identical Red, 3 are identical Blue, and 1 is Green. How many distinct arrangements exist?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Total (n) = 8. Identical: 4 Red, 3 Blue.<br>
+                    8! / (4! &times; 3!) = (8 &times; 7 &times; 6 &times; 5) / (3 &times; 2 &times; 1) <br>
+                    = 1680 / 6 = <strong>280 arrangements</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 17: Combining Rules I</h3>
+                <p>A restaurant offers 3 appetizers, 5 main courses, and 2 desserts. If a meal consists of exactly one of each, how many different meals are possible?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Using the Product Rule: 3 &times; 5 &times; 2 = <strong>30 different meals</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 18: Evaluating "0!" in Counting</h3>
+                <p>When calculating P(n, n) — meaning arranging all <em>n</em> items out of <em>n</em> items — the formula results in n! / 0!. What does this evaluate to and why?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    By mathematical definition, <strong>0! = 1</strong>. Therefore, n! / 1 simply equals <strong>n!</strong>. This correctly matches the logic that arranging <em>n</em> items has <em>n!</em> possibilities.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 19: Complex Product Rule</h3>
+                <p>How many bit strings (using only 0s and 1s) of length 8 are there?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    For each of the 8 positions, there are 2 choices (0 or 1). Using the Product Rule (or Permutation with Repetition):<br>
+                    2<sup>8</sup> = <strong>256 bit strings</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 20: Permutation Logic Check</h3>
+                <p>If you are picking a team of 3 students from a class of 20 to just go on a field trip together, should you use the Permutation formula? Why or why not?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>No.</strong> Because all 3 students are just going on a trip together, the order they are chosen does not matter. You would use Combinations (Lecture 5!), not Permutations.</p>
+                </details>
+            </div>
+
+        </div>
+        
+        <a href="../lesson4.html" class="magical-btn" style="background: #2e0b0b; border-color:#d3a625;">🔙 Return to Lecture 4</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>

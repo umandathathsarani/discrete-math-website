@@ -9,12 +9,12 @@
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
         <h1>Lecture 4: The Basics of Counting & Permutations</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -29,35 +29,106 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 4: The Basics of Counting & Permutations</h2>
+        <h2>Lecture 4: The Basics of Counting (Complete Notes)</h2>
 
         <div class="concept-box">
-            <h3>1. The Counting Rules</h3>
+            <h3>1. Introduction to Counting</h3>
+            <p>Counting is the mathematical process of determining the number of elements in a set or the number of ways to arrange or choose objects without actually having to list every single one out.</p>
+            <p><strong>Common Applications:</strong></p>
             <ul>
-                <li><strong>Sum Rule (Mutually Exclusive):</strong> If a task can be done in n<sub>1</sub> ways or n<sub>2</sub> ways, total ways = n<sub>1</sub> + n<sub>2</sub>.</li>
-                <li><strong>Product Rule (Sequential):</strong> If a procedure has two tasks done in n<sub>1</sub> and n<sub>2</sub> ways, total ways = n<sub>1</sub> &times; n<sub>2</sub>.</li>
-                <li><strong>Subtraction Rule (Inclusion-Exclusion):</strong> Used when tasks overlap. Total = n<sub>1</sub> + n<sub>2</sub> - (number of common ways).</li>
-                <li><strong>Division Rule:</strong> Used when items are grouped in indistinguishable ways.</li>
+                <li>Counting outcomes in a game of chance.</li>
+                <li>Determining possible combinations of clothes.</li>
+                <li>Calculating the number of unique passwords or network IP addresses that can be created.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Permutations</h3>
-            <p>An arrangement where <strong>order matters</strong>.</p>
-            <ul>
-                <li><strong>Without Repetition:</strong> P(n, r) = n! / (n-r)!</li>
-                <li><strong>With Repetition:</strong> n<sup>r</sup></li>
-                <li><strong>With Indistinguishable Objects:</strong> n! / (n<sub>1</sub>! &times; n<sub>2</sub>! &times; ... &times; n<sub>k</sub>!)</li>
+            <h3>2. The Four Rules of Counting</h3>
+            <p>To count efficiently, we rely on four fundamental frameworks depending on how the tasks are structured.</p>
+
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>1. The Addition Rule (Sum Rule)</strong>
+                        If a task can be done in one of <em>n<sub>1</sub></em> ways OR in one of <em>n<sub>2</sub></em> ways, and none of the <em>n<sub>1</sub></em> ways overlap with the <em>n<sub>2</sub></em> ways, then there are <strong>n<sub>1</sub> + n<sub>2</sub></strong> total ways to do the task.
+                        <div class="ravenclaw-note">
+                            <strong>🪄 In Simple Terms:</strong> Use the Sum Rule when the choices are <strong>Mutually Exclusive</strong> (you can only pick ONE option total from multiple different groups). Keywords: "OR".
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>2. The Multiplication Rule (Product Rule)</strong>
+                        If a procedure can be broken down into a sequence of two tasks, where the first task can be done in <em>n<sub>1</sub></em> ways and the second task can be done in <em>n<sub>2</sub></em> ways, then there are <strong>n<sub>1</sub> &times; n<sub>2</sub></strong> ways to do the procedure.
+                        <div class="ravenclaw-note">
+                            <strong>🪄 In Simple Terms:</strong> Use the Product Rule when events happen <strong>Sequentially</strong> (you must do task 1 AND task 2). Keywords: "AND", "FOLLOWED BY".
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>3. The Subtraction Rule (Inclusion-Exclusion)</strong>
+                        If a task can be done in either <em>n<sub>1</sub></em> ways or <em>n<sub>2</sub></em> ways, but some of these ways overlap (they belong to both), we must subtract the overlap so we don't count it twice.<br>
+                        <strong>|A &cup; B| = |A| + |B| - |A &cap; B|</strong>
+                        <div class="ravenclaw-note">
+                            <strong>🪄 In Simple Terms:</strong> Use this when choices overlap. Add the groups together, then subtract the common items!
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>4. The Division Rule</strong>
+                        If a task can be done using a procedure that yields <em>n</em> total ways, but every distinct outcome is actually repeated <em>d</em> times (grouped), then the number of unique ways is <strong>n / d</strong>.
+                    </div>
+                </li>
             </ul>
         </div>
+
+        <div class="concept-box">
+            <h3>3. Permutations (Order Matters!)</h3>
+            <p>A permutation is an arrangement of items in a specific, strict order. <strong>The order of the objects absolutely matters</strong> (e.g., the password "123" is completely different from "321").</p>
+            
+            <p>Permutations are categorized into three distinct types based on the rules of the arrangement:</p>
+
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>Type A: Permutation Without Repetition</strong>
+                        Each item can be used only once. The number of permutations of <em>r</em> elements chosen from a total of <em>n</em> distinct elements is given by:
+                        <br><br><strong>P(n, r) = <sup>n!</sup> &frasl; <sub>(n - r)!</sub></strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Type B: Permutation With Repetition</strong>
+                        Items can be used multiple times (e.g., a lock where you can use the number '5' three times in a row). The formula is simply:
+                        <br><br><strong>n<sup>r</sup></strong> <br>
+                        <em>(where n is the number of options, and r is the number of slots to fill).</em>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Type C: Permutation With Indistinguishable Objects</strong>
+                        Some items in the group are perfectly identical and cannot be distinguished from each other (e.g., arranging the letters in the word "SUCCESS"). 
+                        <br><br><strong><sup>n!</sup> &frasl; <sub>(n<sub>1</sub>! &times; n<sub>2</sub>! &times; ... &times; n<sub>k</sub>!)</sub></strong>
+                        <div class="ravenclaw-note">
+                            <strong>🪄 Formula Guide:</strong> <em>n!</em> is the total number of items. You divide by the factorials of the counts of each identical item.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <a href="Tutorials/tutorial-4.html" class="magical-btn">⚡ Practice These Spells (Tutorial 4)</a>
+
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
-            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener noreferrer">umandathathsarani</a>
         </p>
     </footer>
 
