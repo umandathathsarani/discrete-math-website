@@ -231,3 +231,48 @@ details p {
     font-style: normal;
     letter-spacing: 0.5px;
 }
+
+.laws-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.laws-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 3px solid #d3a625;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.law-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.law-image {
+    width: 180px; 
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: 2px solid #d3a625;
+}
+
+@media (max-width: 600px) {
+    .laws-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+    .law-text {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+    .law-image {
+        width: 80%;
+    }
+}
