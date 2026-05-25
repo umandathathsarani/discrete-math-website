@@ -215,9 +215,9 @@ details p {
 }
 
 .ravenclaw-note {
-    background-color: #1a2c42; 
-    color: #e0e0e0; 
-    border-left: 4px solid #c0803e;
+    background-color: #2e0b0b;
+    color: #e0d0a6; 
+    border-left: 4px solid #d3a625;
     padding: 10px 15px;
     margin-top: 12px;
     font-size: 0.95rem;
@@ -227,6 +227,7 @@ details p {
 }
 
 .ravenclaw-note strong {
-    color: #c0803e;
+    color: #d3a625; 
     font-style: normal;
+    letter-spacing: 0.5px;
 }
