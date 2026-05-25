@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 7: Graphs Practice</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 7: Graphs & Algorithms</h1>
+        <p>Test Your Knowledge Before the O.W.L. Exams</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Graphs Theory: Master Practice Bank</h2>
+        <p>Attempt to solve each problem on a piece of parchment before revealing the magical answer below it. A true Ravenclaw tests their limits!</p>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Question 1: Graph Classification</h3>
+                <p>If a graph has multiple edges connecting the exact same pair of vertices, what specific classification of graph is it?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is a <strong>Multigraph</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Generating from Sets</h3>
+                <p>You are given the edge set E = {(a,b), (b,c), (c,a)}. If this is a <em>directed</em> graph, can you traverse from vertex c to vertex b in one step?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>No.</strong> In a directed graph, the pair (b,c) means the edge goes strictly from b to c. There is no (c,b) edge listed in the set.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Adjacency</h3>
+                <p>If an edge <em>e</em> connects vertex X and vertex Y in an undirected graph, describe the relationship between X and Y.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Vertex X and Vertex Y are <strong>adjacent vertices</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Incidence</h3>
+                <p>Following Question 3, what is the relationship between the edge <em>e</em> and vertex X?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The edge <em>e</em> is <strong>incident</strong> to vertex X.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: Vertex Degree</h3>
+                <p>In an undirected graph, a vertex <em>v</em> has 3 standard edges connecting to other vertices, and 1 loop connecting to itself. What is the degree of <em>v</em>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The degree is <strong>5</strong>. (Standard edges count as 1 each, but a self-loop contributes 2 to the degree of a vertex in an undirected graph).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Directed Degrees</h3>
+                <p>In a directed graph, vertex A has edges pointing to B, C, and D. It has edges pointing to it from E and F. What is the indegree and outdegree of A?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Indegree:</strong> 2 (from E, F)<br>
+                    <strong>Outdegree:</strong> 3 (to B, C, D)</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: Circuits vs Cycles</h3>
+                <p>What is the difference between a simple circuit and a cycle?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A circuit is any path that starts and ends at the same vertex. A <strong>cycle</strong> is a strict type of simple circuit where <em>no other vertex</em> is repeated along the way except the start/end point.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Hamiltonian Cycles</h3>
+                <p>For a cycle to be considered a "Hamiltonian Cycle", what specific condition must it fulfill?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It must visit <strong>every single vertex</strong> in the entire graph exactly once before returning to the start.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: Adjacency Matrix Values</h3>
+                <p>In an Adjacency Matrix A for an unweighted graph, what do the values of 1 and 0 represent at position a<sub>ij</sub>?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>1</strong> means there is an edge connecting vertex <em>i</em> to vertex <em>j</em>.<br>
+                    <strong>0</strong> means there is no edge between them.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: Matrix Symmetry</h3>
+                <p>Will the Adjacency Matrix of an <em>undirected</em> graph always be symmetrical across its main diagonal? Why?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Yes.</strong> Because if there is an edge between i and j (a<sub>ij</sub> = 1), there is identically an edge between j and i (a<sub>ji</sub> = 1).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Identifying Trees</h3>
+                <p>What two conditions must a graph meet to be defined mathematically as a Tree?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. It must be <strong>connected</strong>.<br>
+                    2. It must contain <strong>no cycles</strong> (acyclic).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Forests</h3>
+                <p>If you have an undirected graph that contains no cycles, but it is broken into three completely disconnected pieces, what is it called?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A <strong>Forest</strong> (a collection of disconnected trees).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Tree Edges Formula</h3>
+                <p>If a tree has exactly 20 vertices, how many edges does it possess?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>19 edges.</strong> A tree always has exactly |V| - 1 edges.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Spanning Tree Edges</h3>
+                <p>How many edges must be removed from a connected graph with <em>n</em> vertices and <em>m</em> edges to produce a valid spanning tree?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A spanning tree must have exactly (n - 1) edges. Therefore, you must remove <strong>m - (n - 1)</strong> edges, which simplifies to <strong>m - n + 1</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: Memory Efficiency</h3>
+                <p>Which graph representation uses less memory for a very large, sparse graph (very few edges): Adjacency Matrix or Adjacency List?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Adjacency List.</strong> It only uses memory proportional to Θ(V + E), whereas a matrix wastes memory storing thousands of zeros, taking O(V<sup>2</sup>) space.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 16: BFS Data Structures</h3>
+                <p>Which fundamental data structure does the Breadth-First Search (BFS) algorithm use to keep track of the vertices it needs to process next?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A <strong>Queue</strong> (First-In, First-Out). This ensures it searches level-by-level.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 17: DFS Data Structures</h3>
+                <p>Which fundamental data structure does the Depth-First Search (DFS) algorithm use to explore as deep as possible before backtracking?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A <strong>Stack</strong> (Last-In, First-Out), which is often implemented implicitly using recursive function calls.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 18: BFS Color Meanings</h3>
+                <p>In the BFS algorithm, what does it mean when a vertex is colored GRAY?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    GRAY means the vertex has been <strong>discovered</strong> and is currently in the queue, but its own neighbors have not all been fully explored yet.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 19: DFS Timestamps</h3>
+                <p>In DFS, each vertex receives a timestamp <code>f[v]</code>. What specific event does this timestamp record?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It records the <strong>finish time</strong>—the exact moment when the search finishes examining every edge in vertex v's adjacency list (and the vertex is colored BLACK).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 20: Algorithm Running Times</h3>
+                <p>What is the total running time for both the BFS and DFS algorithms when implemented using an Adjacency List?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Both algorithms run in linear time: <strong>O(V + E)</strong> or <strong>Θ(V + E)</strong>, as they process every vertex and every edge a constant number of times.</p>
+                </details>
+            </div>
+
+        </div>
+        
+        <a href="../lesson7.html" class="magical-btn" style="background: #1a2c42; border-color:#c0803e;">🔙 Return to Lecture 7</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>

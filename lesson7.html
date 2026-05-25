@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 7: Graph Theory & Search Algorithm</title>
+    <title>Lesson 7: Discrete Mathematics - Graphs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
-        <h1>Lecture 7: Graph Theory & Search Algorithms</h1>
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>Lecture 7: Graphs & Algorithms</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -29,32 +29,207 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 7: Graph Theory & Search Algorithms</h2>
+        <h2>Lecture 7: Graphs and Algorithms</h2>
 
         <div class="concept-box">
-            <h3>1. Graph Components</h3>
+            <h3>1. Introduction to Graphs</h3>
+            <p>A <strong>Graph</strong> is a fundamental data structure in computer science consisting of a set of <strong>vertices</strong> (nodes) and a set of <strong>edges</strong> (connections between the nodes).</p>
+            <p>Graphs are a pervasive data structure, and algorithms for working with them are fundamental to the field. Hundreds of interesting computational problems are defined in terms of graphs.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/graph-example.png" alt="Simple Graph Diagram with 5 Nodes" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 1: A simple graph representation.</p>
+            </div>
+
+            <h4>Real-World Applications</h4>
             <ul>
-                <li><strong>Vertices (V):</strong> The nodes or points in the graph.</li>
-                <li><strong>Edges (E):</strong> The connections between vertices. Can be Directed (one-way) or Undirected (two-way).</li>
-                <li><strong>Simple Graph:</strong> No multiple edges between the same two nodes, and no loops.</li>
-                <li><strong>Multigraph:</strong> Allows multiple edges between the same nodes.</li>
+                <li><strong>Road Networks:</strong> Cities act as vertices, and roads between cities act as edges.</li>
+                <li><strong>Electronic Circuits:</strong> Junctions act as vertices, and electronic components (resistors, capacitors) act as edges.</li>
+                <li><strong>Aviation/Flights:</strong> Cities act as vertices, and flight paths from one city to another act as edges.</li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Graph Traversal</h3>
+            <h3>2. Graph Categorization</h3>
             <ul>
-                <li><strong>Breadth-First Search (BFS):</strong> Explores level-by-level using a Queue. Good for finding the shortest path in unweighted graphs.</li>
-                <li><strong>Depth-First Search (DFS):</strong> Explores as deep as possible along a branch before backtracking, using a Stack or recursion.</li>
+                <li><strong>Directed Graphs (Digraph):</strong> All the edges have a specific direction. They point from one vertex to another.</li>
+                <li><strong>Undirected Graphs:</strong> Edges are not directed. The connection is a two-way street.</li>
+                <li><strong>Weighted Graphs:</strong> All the edges have been assigned a numerical weight (e.g., cost, distance, time).</li>
+                <li><strong>Multigraphs:</strong> The same pair of vertices have more than one edge connecting them.</li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/graph-types.png" alt="Directed vs Undirected Graphs" style="max-width: 100%; height: auto; border: 2px solid #c0803e; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 2: Examples of basic graph classifications.</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. Graph Terminology</h3>
+            <p>A graph is formally defined as <strong>G = (V, E)</strong> where V is the set of vertices and E is the set of edges. Edges in a directed graph are ordered pairs.</p>
+            
+            <ul>
+                <li><strong>Orientation:</strong> In a directed graph, the edge (i, j) is different from (j, i). The orientation is strictly from <em>i</em> to <em>j</em>.</li>
+                <li><strong>Adjacent Vertices:</strong> If (i, j) is an edge of the graph, vertex i and vertex j are adjacent. In a digraph, vertex j is adjacent <em>from</em> i, and i is adjacent <em>to</em> j.</li>
+                <li><strong>Incident:</strong> An edge is incident to the vertices it connects. In a digraph (i, j), vertex j is incident <em>from</em> i.</li>
+                <li><strong>Loop or Self-edges:</strong> An edge (i, i) from a vertex to itself.</li>
+                <li><strong>Degree (d(v)):</strong> The number of edges incident to a vertex v. In directed graphs:
+                    <ul>
+                        <li><strong>Indegree:</strong> The number of incoming edges at the vertex.</li>
+                        <li><strong>Outdegree:</strong> The number of outgoing edges from the vertex.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/graph-degrees.png" alt="Graph Indegree and Outdegree" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 3: Node degrees in a directed graph.</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>4. Paths, Circuits, and Cycles</h3>
+            <ul>
+                <li><strong>Path:</strong> A sequence of vertices &lt;v0, v1, v2, ..., vk&gt; such that there is an edge between consecutive vertices. 
+                    <br><em>Example:</em> 2, 1, 4, 5 is a path from 2 to 5.</li>
+                <li><strong>Length of a Path:</strong> The number of edges in the path. In a weighted graph, it's the sum of the weights of the edges on the path.</li>
+                <li><strong>Simple Path:</strong> A path where all vertices in the path are completely distinct (no vertex is visited twice).</li>
+                <li><strong>Reachable:</strong> Vertex A is said to be reachable from B if there is a path from B to A.</li>
+                <li><strong>Circuit:</strong> A path whose first and last vertices are the exact same.</li>
+                <li><strong>Cycle:</strong> A simple circuit. Except for the first and last vertex (which are the same), no other vertex appears more than once.</li>
+                <li><strong>Hamiltonian Cycle:</strong> A cycle of a graph G that contains absolutely <em>all</em> the vertices of G.</li>
             </ul>
         </div>
+
+        <div class="concept-box">
+            <h3>5. Subgraphs and Trees</h3>
+            <ul>
+                <li><strong>Subgraph:</strong> A subgraph of a graph G = (V, E) is a graph H = (U, F) such that U is a subset of V, and F is a subset of E.</li>
+                <li><strong>Connected Graph:</strong> A graph is connected if there is at least one path from every vertex to every other vertex in the graph.</li>
+                <li><strong>Tree:</strong> A connected undirected graph that contains NO cycles. It has exactly |V| - 1 edges.</li>
+                <li><strong>Forest:</strong> An undirected graph that does not contain a cycle (essentially a collection of disconnected trees).</li>
+                <li><strong>Spanning Tree:</strong> A subgraph of G that is a tree and contains <em>all</em> the vertices of G.</li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/graph-tree-forest.png" alt="Tree vs Forest Graphs" style="max-width: 100%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 4: A Tree is fully connected; a Forest is a collection of disconnected trees.</p>
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>6. Representation of Graphs</h3>
+            <p>There are two standard ways to represent a graph G=(V,E) in computer memory. Both are applicable to directed and undirected graphs.</p>
+            
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>1. Adjacency List</strong>
+                        An array of lists. Each individual list shows what vertices a given vertex is adjacent to.
+                        <br><br>
+                        <strong>Properties:</strong>
+                        <ul>
+                            <li>For directed graphs, the sum of lengths of all lists is |E|.</li>
+                            <li>For undirected graphs, the sum is 2|E| (since edges go both ways).</li>
+                            <li><strong>Memory Required:</strong> &Theta;(V + E). Compact and highly preferred for sparse graphs.</li>
+                            <li><strong>Disadvantage:</strong> Slower to determine if a specific edge (u, v) exists, as you must search the list Adj[u].</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>2. Adjacency Matrix</strong>
+                        An n × n matrix A = (a<sub>ij</sub>) where elements are 1 if an edge exists from i to j, and 0 otherwise.
+                        <br><br>
+                        <strong>Properties:</strong>
+                        <ul>
+                            <li><strong>Memory Required:</strong> O(V<sup>2</sup>).</li>
+                            <li>Preferred when the graph is <strong>dense</strong> (|E| is close to |V|<sup>2</sup>) or when quick edge lookups between two vertices are needed.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>7. Searching Graphs: Breadth First Search (BFS)</h3>
+            <p><strong>Why do we search?</strong> To find paths and to determine connectivity.</p>
+            <p>Given a graph G=(V,E) and a source vertex <em>s</em>, BFS systematically explores the edges of G to "discover" every vertex that is reachable from s.</p>
+            <ul>
+                <li>It computes the shortest distance (smallest number of edges) from s to each reachable vertex.</li>
+                <li>It produces a "breadth-first tree" with root s.</li>
+                <li><strong>Data Structure:</strong> Implemented using a <strong>Queue</strong> (First-In, First-Out).</li>
+            </ul>
+            
+            <h4>The BFS Coloring System:</h4>
+            <ul>
+                <li><strong>WHITE:</strong> Vertex is undiscovered.</li>
+                <li><strong>GRAY:</strong> Vertex is discovered, but its adjacency list is currently being processed.</li>
+                <li><strong>BLACK:</strong> Vertex is completely finished.</li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/graph-bfs.png" alt="Breadth First Search Tree" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 5: BFS explores the graph level-by-level, utilizing a Queue.</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                <strong>BFS(G, s) Algorithm Steps:</strong><br>
+                1. For each vertex u ∈ V[G] - {s}:<br>
+                &nbsp;&nbsp;&nbsp; color[u] = WHITE, d[u] = ∞, π[u] = NIL<br>
+                2. color[s] = GRAY, d[s] = 0, π[s] = NIL<br>
+                3. Q = ∅, ENQUEUE(Q, s)<br>
+                4. While Q ≠ ∅:<br>
+                &nbsp;&nbsp;&nbsp; u = DEQUEUE(Q)<br>
+                &nbsp;&nbsp;&nbsp; For each v ∈ Adj[u]:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If color[v] == WHITE:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color[v] = GRAY<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d[v] = d[u] + 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; π[v] = u<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENQUEUE(Q, v)<br>
+                &nbsp;&nbsp;&nbsp; color[u] = BLACK
+            </div>
+            <p><strong>Running Time:</strong> O(V + E)</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>8. Searching Graphs: Depth First Search (DFS)</h3>
+            <p>DFS searches the graph deeper whenever possible. Edges are explored out of the most recently discovered vertex <em>v</em> that still has unexplored edges. When all of v's edges have been explored, the search "backtracks".</p>
+            <ul>
+                <li>The predecessor subgraph may be composed of several trees (a depth-first forest).</li>
+                <li><strong>Data Structure:</strong> Implemented using a <strong>Stack</strong> (or recursion).</li>
+                <li><strong>Timestamps:</strong> Each vertex <em>v</em> gets two timestamps: 
+                    <br><strong>d[v]:</strong> First discovered (grayed).
+                    <br><strong>f[v]:</strong> Finished examining adjacency list (blackened).</li>
+            </ul>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px;">
+                <strong>DFS(G) Algorithm Steps:</strong><br>
+                1. For each vertex u ∈ V[G]: color[u] = WHITE, π[u] = NIL<br>
+                2. time = 0<br>
+                3. For each vertex u ∈ V[G]:<br>
+                &nbsp;&nbsp;&nbsp; If color[u] == WHITE, then DFS-VISIT(u)<br><br>
+                <strong>DFS-VISIT(u)</strong><br>
+                1. color[u] = GRAY<br>
+                2. time = time + 1; d[u] = time<br>
+                3. For each v ∈ Adj[u]:<br>
+                &nbsp;&nbsp;&nbsp; If color[v] == WHITE:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; π[v] = u<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DFS-VISIT(v)<br>
+                4. color[u] = BLACK<br>
+                5. time = time + 1; f[u] = time
+            </div>
+            <p><strong>Running Time:</strong> &Theta;(V + E)</p>
+        </div>
+
+        <a href="Tutorials/tutorial-7.html" class="magical-btn">⚡ Practice These Spells (Tutorial 7)</a>
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
             GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
         </p>
     </footer>
