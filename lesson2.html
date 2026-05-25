@@ -9,12 +9,12 @@
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
         <h1>Lecture 2: Functions</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -29,40 +29,121 @@
     </nav>
 
     <div class="container">
-        <h2>Lecture 2: Functions</h2>
+        <h2>Lecture 2: Functions (Complete Notes)</h2>
 
         <div class="concept-box">
-            <h3>1. Definition and Terminology</h3>
-            <p>A function <strong>f</strong> from a set X to a set Y relates each element of X to a <strong>unique</strong> element of Y.</p>
+            <h3>1. Definition of a Function</h3>
+            <p>A <strong>Function (f)</strong> from a set X to a set Y is a relationship between elements of X and elements of Y with the property that <strong>each element of X is related to a unique element of Y</strong>.</p>
             <ul>
-                <li><strong>Domain:</strong> The set of all possible input values (X).</li>
-                <li><strong>Codomain:</strong> The set from which the function's output values are chosen (Y).</li>
-                <li><strong>Range (Image):</strong> The actual set of all values taken by the function (a subset of the Codomain).</li>
+                <li><strong>Domain:</strong> The set of all valid input values (Set X).</li>
+                <li><strong>Codomain:</strong> The set from which the function's output values are chosen (Set Y).</li>
+            </ul>
+            <div class="ravenclaw-note">
+                <strong>🦅 In Simple Terms:</strong> Think of a function as a magical sorting machine. You drop an item from the Domain into the machine, and it guarantees to spit out exactly one specific item from the Codomain. It never spits out two things for one input!
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>2. Range / Image</h3>
+            <p>The unique element <em>y</em> to which <em>f</em> sends <em>x</em> is denoted by <strong>f(x)</strong>. This is called "f of x", the value of f at x, or the <strong>Image</strong> of x under f.</p>
+            <p>The set of all actual values of <em>f</em> taken together is called the <strong>Range</strong> of f (or the image of X under f).</p>
+            <div class="ravenclaw-note">
+                <strong>🦅 Codomain vs. Range:</strong> The Codomain is every possible output that *could* exist. The Range is the set of outputs that actually *do* get hit by the function. The Range is always a subset of the Codomain.
+            </div>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. Equality of Functions</h3>
+            <p>Two functions, <em>f: A &rarr; B</em> and <em>g: A &rarr; B</em>, are considered strictly equal if and only if they satisfy two key conditions:</p>
+            <ol>
+                <li>They have the exact same Domain (A) and Codomain (B).</li>
+                <li>They produce the same output for every single input. Mathematically: <strong>f = g if and only if &forall;x &isin; A, f(x) = g(x)</strong>.</li>
+            </ol>
+        </div>
+
+        <div class="concept-box">
+            <h3>4. Types of Functions</h3>
+            <p>Functions are classified by how inputs map to outputs:</p>
+            
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>One-to-One (Injective)</strong>
+                        For all elements x<sub>1</sub> and x<sub>2</sub> in X, if f(x<sub>1</sub>) = f(x<sub>2</sub>), then x<sub>1</sub> = x<sub>2</sub>.
+                        <div class="ravenclaw-note">
+                            <strong>🦅 In Simple Terms:</strong> No two different inputs map to the same output. Every output gets hit by a maximum of one arrow.
+                        </div>
+                    </div>
+                    <img src="Images/func-injective.jpg" alt="Injective Mapping Diagram" class="law-image" style="background: white;">
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Onto (Surjective)</strong>
+                        Given any element y in Y, it is possible to find an element x in X such that y = f(x).
+                        <div class="ravenclaw-note">
+                            <strong>🦅 In Simple Terms:</strong> The Range equals the Codomain! Every single item in the output set gets hit by at least one arrow. Nothing is left out.
+                        </div>
+                    </div>
+                    <img src="Images/func-surjective.jpg" alt="Surjective Mapping Diagram" class="law-image" style="background: white;">
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>Many-to-One</strong>
+                        Two or more elements of the domain set are related to a single element of the codomain set.
+                        <div class="ravenclaw-note">
+                            <strong>🦅 In Simple Terms:</strong> Multiple inputs point to the exact same output. (This is the opposite of One-to-One).
+                        </div>
+                    </div>
+                    <img src="Images/func-manytoone.jpg" alt="Many to One Diagram" class="law-image" style="background: white;">
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>One-to-One Correspondence (Bijective)</strong>
+                        A function that is BOTH One-to-One (Injective) and Onto (Surjective).
+                        <div class="ravenclaw-note">
+                            <strong>🦅 In Simple Terms:</strong> A perfect pairing. Every input has a unique output, and every output has exactly one matching input. No overlaps and no leftovers!
+                        </div>
+                    </div>
+                    <img src="Images/func-bijective.jpg" alt="Bijective Mapping Diagram" class="law-image" style="background: white;">
+                </li>
             </ul>
         </div>
 
         <div class="concept-box">
-            <h3>2. Types of Functions</h3>
-            <ul>
-                <li><strong>One-to-One (Injective):</strong> No two different elements in the domain map to the same element in the codomain. If f(a) = f(b), then a = b.</li>
-                <li><strong>Onto (Surjective):</strong> Every element in the codomain is mapped to by at least one element in the domain. (Range = Codomain).</li>
-                <li><strong>Bijective:</strong> A function that is both One-to-One and Onto.</li>
-            </ul>
+            <h3>5. Inverse Functions (f<sup> -1</sup>)</h3>
+            <p>An inverse function exists <strong>only</strong> when the function f(x) is Bijective (both one-to-one and onto).</p>
+            <p>If f: X &rarr; Y, then the inverse is f<sup> -1</sup>: Y &rarr; X.<br>
+            <strong>Definition:</strong> f<sup> -1</sup>(y) = { x &isin; X | f(x) = y }</p>
+            
+            <h4 style="color: #740001; border-bottom: 1px solid #d3a625; padding-bottom: 5px; margin-top: 20px;">🪄 Example 1: Linear Equation</h4>
+            <p>Find the inverse of <strong>f(x) = 2x + 3</strong> (mapping real numbers to real numbers).</p>
+            <ol>
+                <li>Start with the equation: <strong>y = 2x + 3</strong></li>
+                <li>Solve for x in terms of y: <strong>x = (y - 3) / 2</strong></li>
+                <li>Interchange x with y: <strong>y = (x - 3) / 2</strong></li>
+                <li>The inverse function is: <strong>f<sup> -1</sup>(x) = (x - 3) / 2</strong></li>
+            </ol>
+
+            <h4 style="color: #740001; border-bottom: 1px solid #d3a625; padding-bottom: 5px; margin-top: 20px;">🪄 Example 2: Quadratic Equation</h4>
+            <p>Find the inverse of <strong>f(x) = x<sup>2</sup></strong></p>
+            <ol>
+                <li>Start with the equation: <strong>y = x<sup>2</sup></strong></li>
+                <li>Solve for x in terms of y: <strong>x = &radic;y</strong></li>
+                <li>Interchange x with y: <strong>y = &radic;x</strong></li>
+                <li>The inverse function is: <strong>f<sup> -1</sup>(x) = &radic;x</strong></li>
+            </ol>
         </div>
 
-        <div class="concept-box">
-            <h3>3. Inverse and Composition</h3>
-            <p><strong>Inverse Function (f⁻¹):</strong> If f is bijective, it has an inverse. If f(x) = y, then f⁻¹(y) = x.</p>
-            <p><strong>Composition of Functions (f ∘ g):</strong> The process of applying one function to the results of another. (f ∘ g)(x) = f(g(x)).</p>
-        </div>
+        <a href="#" class="magical-btn">⚡ Practice These Spells (Tutorial 2)</a>
+
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
-            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener noreferrer">umandathathsarani</a>
         </p>
     </footer>
 
