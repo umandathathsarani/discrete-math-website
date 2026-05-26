@@ -27,18 +27,22 @@ The grimoire is organized into the following chapters:
     * Hogwarts-themed "Dark Academia" aesthetic.
     * Glassmorphism effects for layout containers.
     * Custom scrollbar styling.
-    * Fully responsive layout.
+    * Fully responsive layout with active-tab highlighting.
 * **Icons:** Powered by FontAwesome.
 
 ## 🚀 How to Run Locally
-1. Clone this repository to your local machine:
-   `git clone https://github.com/umandathathsarani/discrete-math-notes.git`
-2. Open the folder in your code editor (VS Code recommended).
-3. Use the **"Live Server"** extension in VS Code: right-click `index.html` and select **"Open with Live Server"**.
+1. Clone this repository: `git clone https://github.com/umandathathsarani/discrete-math-notes.git`
+2. Open the folder in VS Code.
+3. Use the **"Live Server"** extension: right-click `index.html` and select **"Open with Live Server"**.
 
 ## 👤 Author
-**Mummullage Binuri Umanda Thathsarani** Undergraduate, Faculty of Computing  
-Sri Lanka Institute of Information Technology (SLIIT)
+**Mummullage Binuri Umanda Thathsarani** Undergraduate, Faculty of Computing, SLIIT
 
 ---
+
+## ⚖️ Copyright Notice
+**© 2026 Umanda Thathsarani. All Rights Reserved.**
+
+Unauthorized copying of this project, in whole or in part, via any medium, is strictly prohibited. This work is proprietary and confidential.
+
 *Created as a personal academic project for IT1160 - Discrete Mathematics.*
