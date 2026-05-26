@@ -273,3 +273,7 @@ details p {
         width: 80%;
     }
 }
+
+nav a i {
+    margin-right: 8px;
+}
