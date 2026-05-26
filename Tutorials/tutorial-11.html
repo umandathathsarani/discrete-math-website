@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 11: Automata Practice</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../Images/favicon.png">
+</head>
+<body>
+
+    <header>
+        <img src="../Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>⚡ Tutorial 11: Finite Automata</h1>
+        <p>Test Your Knowledge Before the O.W.L. Exams</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">🏰 Great Hall</a>
+        <a href="../lesson1.html">Lec 1: Set Theory</a>
+        <a href="../lesson2.html">Lec 2: Functions</a>
+        <a href="../lesson3.html">Lec 3: Sequences</a>
+        <a href="../lesson4.html">Lec 4: Counting I</a>
+        <a href="../lesson5.html">Lec 5: Counting II</a>
+        <a href="../lesson6.html">Lec 6: Induction</a>
+        <a href="../lesson7.html">Lec 7: Graphs</a>
+        <a href="../lesson8.html">Lec 8: Trees & Heaps</a>
+        <a href="../lesson9.html">Lec 9: Recursion</a>
+        <a href="../lesson10.html">Lec 10: Algorithms</a>
+        <a href="../lesson11.html">Lec 11: Automata</a>
+    </nav>
+
+    <div class="container">
+        <h2>📜 Finite Automata: Master Practice Bank</h2>
+        <p>Attempt to solve each problem on a piece of parchment before revealing the magical answer below it. A true Ravenclaw tests their limits!</p>
+
+        <div class="concept-box">
+            
+            <div class="quiz-question">
+                <h3>Question 1: The Core Problem</h3>
+                <p>What is the primary objective of "String Matching"?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Finding one or more occurrences of a specific <strong>pattern string</strong> within another string or body of text.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 2: Applications</h3>
+                <p>Name at least three real-world applications of string matching algorithms.</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    1. Text editing (Find and Change)<br>
+                    2. Computer security (Virus detection, password checking)<br>
+                    3. DNA sequence analysis<br>
+                    4. Data communications (Header analysis)</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 3: Automaton Efficiency</h3>
+                <p>When using a finite automaton for string matching, how many times does the algorithm examine each text character?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It examines each text character <strong>exactly once</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 4: Time Complexity</h3>
+                <p>Because an automaton scans each character exactly once, what is the time complexity required per text character?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It takes <strong>constant time</strong> (O(1)) per text character.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 5: The Automaton Tuple</h3>
+                <p>A finite automaton M is formally defined as a mathematical tuple containing how many elements?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is a <strong>5-tuple</strong>: (Q, q<sub>0</sub>, A, &Sigma;, &delta;).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 6: Definition of Q</h3>
+                <p>In the 5-tuple, what does <strong>Q</strong> represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    A finite set of <strong>states</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 7: Definition of q0</h3>
+                <p>In the 5-tuple, what does <strong>q<sub>0</sub></strong> represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The <strong>start state</strong> of the automaton.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 8: Definition of A</h3>
+                <p>In the 5-tuple, what does <strong>A</strong> represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The distinguished set of <strong>accepting states</strong> (which is a subset of Q).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 9: Definition of &Sigma;</h3>
+                <p>In the 5-tuple, what does the Greek letter Sigma (<strong>&Sigma;</strong>) represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    The finite <strong>input alphabet</strong> (e.g., the characters {a, b}).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 10: The Transition Function</h3>
+                <p>The transition function &delta; (Delta) maps two inputs to one output. What are the two inputs?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It maps the <strong>current state</strong> (from Q) and the <strong>current input character</strong> (from &Sigma;) to determine the next state.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 11: Diagram Edges</h3>
+                <p>In a state-transition diagram, what do the directed arrows (edges) represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    They represent the <strong>state transitions</strong> (the execution of the &delta; function based on an input character).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 12: Accepting States Visual</h3>
+                <p>In the lecture's state-transition diagrams, how is an accepting state visually differentiated from a normal state?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Accepting states are typically <strong>blackened or shaded</strong> (and commonly drawn with a double circle in other notations).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 13: Tracing Inputs (Part 1)</h3>
+                <p>An automaton accepts strings ending in an odd number of 'a's. State 0 is Start, State 1 is Accept. Tracing the input <code>abaaa</code> results in sequence (0, 1, 0, 1, 0, 1). Is this accepted?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>Yes</strong>, because the final state is 1, which is the accepting state.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 14: Tracing Inputs (Part 2)</h3>
+                <p>Tracing the input <code>abbaa</code> results in the sequence (0, 1, 0, 0, 1, 0). Is this accepted?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>No</strong>, because the final state is 0, which is a rejecting state.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 15: The "Spine" of the Diagram</h3>
+                <p>When looking at a complex automaton diagram built for a specific pattern (like "ababaca"), what do the right-going edges (the "spine") represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    They represent <strong>successful matches</strong> between the pattern and the text characters.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 16: Left-going Edges</h3>
+                <p>Conversely, what do the left-going edges in a pattern-matching automaton represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    They represent <strong>failing matches</strong>, causing the automaton to fall back to an earlier state to continue scanning.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 17: Implicit Edges</h3>
+                <p>By standard convention, if a state <em>i</em> has no explicitly drawn outgoing edge for a character <em>a</em>, what is the assumed value of &delta;(i, a)?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    It is assumed to be <strong>0</strong> (it resets to the start state).</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 18: DNA Alphabet</h3>
+                <p>If you were building a finite automaton specifically for DNA sequence analysis, what would your input alphabet &Sigma; likely be?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    <strong>&Sigma; = {A, C, G, T}</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 19: Transition Tables</h3>
+                <p>In a tabular representation of a transition function, what do the rows, columns, and internal cells represent?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    Rows represent the <strong>current state</strong>, columns represent the <strong>input character</strong>, and the cell value is the <strong>next state</strong>.</p>
+                </details>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Question 20: Finding the Match</h3>
+                <p>In the "ababaca" example, if &phi;(T<sub>9</sub>) equals 7, and 7 is the only accepting state, what has just occurred?</p>
+                <details>
+                    <summary>🪄 Lumos! Reveal Answer</summary>
+                    <p><strong>Answer:</strong><br>
+                    One full, successful occurrence of the pattern was <strong>found</strong>, ending exactly at text position 9.</p>
+                </details>
+            </div>
+
+        </div>
+        
+        <a href="../lesson11.html" class="magical-btn" style="background: #1a2c42; border-color:#c0803e;">🔙 Return to Lecture 11</a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
+        <p>
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
+            GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
+        </p>
+    </footer>
+
+</body>
+</html>

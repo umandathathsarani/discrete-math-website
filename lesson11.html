@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 11: Finite Automata & String Matching</title>
+    <title>Lesson 11: Discrete Mathematics - Finite Automata</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 <body>
 
     <header>
-        <img src="/Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
-        <h1>Lecture 11: Finite Automata & String Matching</h1>
+        <img src="Images/sliit-logo.jpg" alt="SLIIT Logo" class="university-logo">
+        <h1>Lecture 11: Finite Automata</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">🏰 Great Hall</a>
         <a href="lesson1.html">Lec 1: Set Theory</a>
         <a href="lesson2.html">Lec 2: Functions</a>
         <a href="lesson3.html">Lec 3: Sequences</a>
@@ -32,24 +33,120 @@
         <h2>Lecture 11: Finite Automata & String Matching</h2>
 
         <div class="concept-box">
-            <h3>1. Finite Automaton (M)</h3>
-            <p>A machine model used for string matching and text processing (e.g., DNA analysis, virus detection). It scans text strictly in constant time per character.</p>
-            <p>Defined as a 5-tuple: <strong>(Q, q₀, A, &Sigma;, &delta;)</strong></p>
+            <h3>1. String Matching Basics</h3>
+            <p><strong>String Matching</strong> is the computational problem of finding one or more occurrences of a specific "pattern" string within another larger string or body of "text".</p>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px; margin: 15px 0;">
+                <strong>Example of a Shift:</strong><br>
+                Text T: &nbsp;&nbsp;&nbsp;A B C A B A A B C A B A C<br>
+                Pattern P: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A B A A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(This is Shift s=3)</em>
+            </div>
+
+            <h4>Real-World Applications</h4>
+            <p>String matching is a highly important subject in the wider domain of text processing. Its applications include:</p>
             <ul>
-                <li><strong>Q:</strong> Finite set of states.</li>
-                <li><strong>q₀:</strong> Start state.</li>
-                <li><strong>A:</strong> Set of accepting states.</li>
-                <li><strong>&Sigma;:</strong> Input alphabet.</li>
-                <li><strong>&delta;:</strong> Transition function mapping a state and input character to a new state.</li>
+                <li><strong>Text Processing & Editing:</strong> E.g., the "Find and Replace" feature in word processors.</li>
+                <li><strong>Computer Security:</strong> Scanning for specific signatures in virus detection and analyzing/checking passwords.</li>
+                <li><strong>Bioinformatics:</strong> DNA sequence analysis to find specific genetic markers.</li>
+                <li><strong>Data Communications:</strong> Analyzing network packet headers.</li>
             </ul>
         </div>
+
+        <div class="concept-box">
+            <h3>2. String Matching with Finite Automata</h3>
+            <p>Many string-matching algorithms build a <strong>Finite Automaton</strong> that scans the text string <em>T</em> for all occurrences of the pattern <em>P</em>.</p>
+            <p><strong>Efficiency:</strong> These string-matching automata are highly efficient. They examine each text character <strong>exactly once</strong>, resulting in a constant time calculation per text character, making the search incredibly fast and linear.</p>
+        </div>
+
+        <div class="concept-box">
+            <h3>3. Formal Definition of a Finite Automaton</h3>
+            <p>A finite automaton <em>M</em> is mathematically defined as a 5-tuple: <strong>(Q, q<sub>0</sub>, A, &Sigma;, &delta;)</strong></p>
+            
+            <ul class="laws-list">
+                <li>
+                    <div class="law-text">
+                        <strong>Q</strong>: A finite set of internal states.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>q<sub>0</sub></strong>: The start state, where <em>q<sub>0</sub> &isin; Q</em>.
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>A</strong>: A distinguished subset of <em>Q</em> representing the <strong>accepting states</strong> (<em>A &subseteq; Q</em>).
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>&Sigma; (Sigma)</strong>: A finite input alphabet (e.g., {a, b}).
+                    </div>
+                </li>
+                <li>
+                    <div class="law-text">
+                        <strong>&delta; (Delta)</strong>: The transition function from <em>Q &times; &Sigma;</em> into <em>Q</em>. It maps the current state and current input character to the next state.
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>4. Automata Representation & Case Study 1</h3>
+            <p>Automata are typically represented either visually via a <strong>state-transition diagram</strong> or systematically via a <strong>tabular transition function</strong>.</p>
+            
+            <h4>Case Study: Accepting strings ending in an odd number of 'a's</h4>
+            <ul>
+                <li><strong>State Set (Q):</strong> {0, 1}</li>
+                <li><strong>Start State (q<sub>0</sub>):</strong> 0</li>
+                <li><strong>Accepting State (A):</strong> 1 (often blackened or double-circled in diagrams)</li>
+                <li><strong>Input Alphabet (&Sigma;):</strong> {a, b}</li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/automata-simple.png" alt="Simple Finite Automaton Diagram" style="max-width: 80%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 1: State-transition diagram for an automaton accepting an odd number of 'a's.</p>
+            </div>
+
+            <p><strong>Tracking the state transitions:</strong></p>
+            <ul>
+                <li><strong>Input: <code>abaaa</code></strong> &rarr; Sequence of states: (0 &rarr; 1 &rarr; 0 &rarr; 1 &rarr; 0 &rarr; 1). Since it ends in state 1 (Accepting), the automaton <strong>accepts</strong> this input.</li>
+                <li><strong>Input: <code>abbaa</code></strong> &rarr; Sequence of states: (0 &rarr; 1 &rarr; 0 &rarr; 0 &rarr; 1 &rarr; 0). Since it ends in state 0, it <strong>rejects</strong> this input.</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <h3>5. Case Study 2: Matching the pattern "ababaca"</h3>
+            <p>This is a more complex automaton designed specifically to match the string <code>P = ababaca</code>.</p>
+            
+            <ul>
+                <li><strong>The Spine:</strong> Right-going directed edges forming the "spine" of the automaton correspond to <em>successful matches</em> between the pattern and input characters.</li>
+                <li><strong>Failing Matches:</strong> Left-going edges correspond to <em>failing matches</em> (resetting back to an earlier state).</li>
+                <li><strong>Convention:</strong> If a state <em>i</em> has no explicitly shown outgoing edge for some character <em>a &isin; &Sigma;</em>, it is assumed that <strong>&delta;(i, a) = 0</strong>.</li>
+            </ul>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="Images/automata-ababaca.png" alt="Complex String Matching Automaton" style="max-width: 100%; height: auto; border: 2px solid #c0803e; border-radius: 8px;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-top: 10px;">Figure 2: Automaton matching "ababaca". The final state (7) is blackened indicating acceptance.</p>
+            </div>
+
+            <h4>Tracking the State Function &phi;(T<sub>i</sub>)</h4>
+            <p>When running this automaton on the text <strong>T = abababacaba</strong>, we track the state <strong>&phi;(T<sub>i</sub>)</strong> the automaton is in after processing the prefix up to character <em>i</em>.</p>
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; font-family: monospace; font-size: 14px; margin-top: 10px;">
+                Text T: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;b&nbsp;&nbsp;a&nbsp;&nbsp;b&nbsp;&nbsp;a&nbsp;&nbsp;b&nbsp;&nbsp;a&nbsp;&nbsp;c&nbsp;&nbsp;a&nbsp;&nbsp;b&nbsp;&nbsp;a<br>
+                State &phi;(T<sub>i</sub>): 0&nbsp;&nbsp;1&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;6&nbsp;&nbsp;7&nbsp;&nbsp;2&nbsp;&nbsp;3
+            </div>
+            <p>Notice it hits state 7 at index 9, meaning one occurrence of the pattern was successfully found!</p>
+        </div>
+
+        <a href="Tutorials/tutorial-11.html" class="magical-btn">⚡ Practice These Spells (Tutorial 11)</a>
     </div>
 
     <footer>
         <p>&copy; 2026 Mummullage Binuri Umanda Thathsarani. All Rights Reserved.</p>
         <p>
-            Email: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
-            Phone: 0742813833 | 
+            Owl Post: <a href="mailto:umathathsarni2003@gmail.com">umathathsarni2003@gmail.com</a> | 
+            Floo Network: 0742813833 | 
             GitHub: <a href="https://github.com/umandathathsarani" target="_blank" rel="noopener">umandathathsarani</a>
         </p>
     </footer>
